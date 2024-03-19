@@ -1,11 +1,12 @@
 import './App.css'
-import { EsignatureApp } from './Projects'
+import { EsignatureApp, RandomizeColorsApp } from './Projects'
 
 function App() {
   return (
     <div>
       <div className=''>
-        <EsignatureApp />
+        {/* <EsignatureApp /> */}
+        <RandomizeColorsApp />
       </div>
     </div>
   )
