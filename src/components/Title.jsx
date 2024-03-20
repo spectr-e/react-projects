@@ -1,6 +1,6 @@
 const Title = ({ title, classes }) => {
   return (
-    <h1 className={!classes ? 'title text-center' : classes}>
+    <h1 className={!classes ? 'title ' : classes && 'title text-center'}>
       {!title ? 'Enter a Title' : title}
     </h1>
   )

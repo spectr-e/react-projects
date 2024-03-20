@@ -44,7 +44,6 @@ const EsignatureApp = () => {
           value={date}
           onChange={handleDate}
           style={inputStyle}
-          className=''
         />
         <input
           type='text'
@@ -52,7 +51,6 @@ const EsignatureApp = () => {
           name='jina'
           style={inputStyle}
           onChange={handleName}
-          className=''
         />
       </footer>
     </div>
