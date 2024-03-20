@@ -1,7 +1,12 @@
 /* eslint-disable no-unused-vars */
 
 import './App.css'
-import { EsignatureApp, LikeMyPhotoApp, RandomizeColorsApp } from './Projects'
+import {
+  EsignatureApp,
+  LikeMyPhotoApp,
+  RandomizeColorsApp,
+  TestimonialsApp,
+} from './Projects'
 
 function App() {
   return (
@@ -9,7 +14,8 @@ function App() {
       <div className=''>
         {/* <EsignatureApp /> */}
         {/* <RandomizeColorsApp /> */}
-        <LikeMyPhotoApp />
+        {/* <LikeMyPhotoApp /> */}
+        <TestimonialsApp />
       </div>
     </div>
   )

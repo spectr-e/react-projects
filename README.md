@@ -17,3 +17,13 @@ It will also randomize different the background color and the title color.
 ## Project 03: Like My Photo App
 
 In this project you will learn how to use clicks and double clicks and also how to integrate react icons into applications. We will also learn how to use the _useState_ hook to keep a record of the number of likes a photo has received.
+
+## Project 04: Testimonials App
+
+In this project you will learn how to use _useEffect_ hook which is going to allow you to get API request or fetch request from a mock server.
+
+We will use a JSON placeholder server as our source of data. We will fetch some posts and put them in a card. We will also fetch some users with their email addresses as well as their comments depending on their ID and email address.
+
+We will also create new components (buttons) allowing us to insert text and icons in the component as well as have its own click event in each of them.
+
+Lastly, we will employ _useState_ hook to manage the state of the component.
