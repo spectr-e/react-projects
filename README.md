@@ -20,7 +20,7 @@ In this project you will learn how to use clicks and double clicks and also how 
 
 ## Project 04: Testimonials App
 
-In this project you will learn how to use _useEffect_ hook which is going to allow you to get API request or fetch request from a mock server.
+In this project, you will learn how to use _useEffect_ hook which is going to allow you to get API requests or fetch requests from a mock server.
 
 We will use a JSON placeholder server as our source of data. We will fetch some posts and put them in a card. We will also fetch some users with their email addresses as well as their comments depending on their ID and email address.
 
