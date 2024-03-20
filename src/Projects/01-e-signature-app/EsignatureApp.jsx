@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Title } from '../../components'
 
 const EsignatureApp = () => {
-  const [date, setDate] = useState(null)
+  const [date, setDate] = useState('')
   const [jina, setJina] = useState('Enter your signature')
 
   const handleName = (e) => {
@@ -22,9 +22,9 @@ const EsignatureApp = () => {
   document.body.style.background = '#eee'
 
   return (
-    <div className='container text-center'>
-      <Title title={jina} classes={'title'} />
-      <Title title={!date ? 'DOB' : date} classes={'main-title'} />
+    <div className='container m-auto text-center'>
+      <Title title={jina} />
+      <Title title={!date ? 'DOB' : date} classes={'subtitle'} />
       <p className='m-4'>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, in
         voluptatum nobis quis, aliquid, accusantium maiores dolor iste optio

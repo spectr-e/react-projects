@@ -1,12 +1,15 @@
+/* eslint-disable no-unused-vars */
+
 import './App.css'
-import { EsignatureApp, RandomizeColorsApp } from './Projects'
+import { EsignatureApp, LikeMyPhotoApp, RandomizeColorsApp } from './Projects'
 
 function App() {
   return (
     <div>
       <div className=''>
         {/* <EsignatureApp /> */}
-        <RandomizeColorsApp />
+        {/* <RandomizeColorsApp /> */}
+        <LikeMyPhotoApp />
       </div>
     </div>
   )
