@@ -220,6 +220,12 @@ body {
 .m-auto {
   margin: auto;
 }
+.mx-auto {
+  margin: 0 auto;
+}
+.my-auto {
+  margin: auto 0;
+}
 .m-1 {
   margin: 16px;
 }

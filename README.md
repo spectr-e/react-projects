@@ -1,7 +1,5 @@
 # 30+ React Projects
 
-### To showcase mastery!
-
 ## Project 01: E-Signature App
 
 This project seeks to create a simple signature application that is going to record one's name and the date or vice versa depending on which order you're writing them in.
