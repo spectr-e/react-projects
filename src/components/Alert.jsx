@@ -1,16 +1,34 @@
 import { useEffect, useState } from 'react'
+import { Button } from '../components'
 
-const Alert = () => {
+const Alert = ({ type, message, delay = false, delayTime = 3000 }) => {
   useEffect(() => {
-    first
+    delay &&
+      setTimeout(() => {
+        setShowAlert(false)
+      }, delayTime)
+  }, [])
 
-    return () => {
-      second
-    }
-  }, [third])
+  const [showAlert, setShowAlert] = useState(true)
 
-  const [first, setfirst] = useState(second)
-  return <div>Alert</div>
+  const handleClose = (e) => {
+    e.target.parentElement.parentElement.classList.add('fadeAlert')
+
+    setTimeout(() => {
+      setShowAlert(false)
+    }, 400)
+  }
+
+  return (
+    showAlert && (
+      <div className={`alert alert-${type}`}>
+        <div className='alert-close'>
+          <span className='mr-1'>{message}</span>
+          <Button classes={'btn-close'} text='X' handleClick={handleClose} />
+        </div>
+      </div>
+    )
+  )
 }
 
 export default Alert
