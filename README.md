@@ -27,3 +27,13 @@ We will use a JSON placeholder server as our source of data. We will fetch some 
 We will also create new components (buttons) allowing us to insert text and icons in the component as well as have its own click event in each of them.
 
 Lastly, we will employ _useState_ hook to manage the state of the component.
+
+## Project 05: Alerts App
+
+In this project, you will learn how to create alerts through an alert component.
+
+There will be three (3) alerts one of which will disappear after a delay of approximately 3 seconds.
+
+You will also be able to click on an alert and it disappears completely. They will also disappear all at once after a delay.
+
+We will employ _useState_ and _useEffect_ hooks to manage the state of the component.

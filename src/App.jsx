@@ -2,6 +2,7 @@
 
 import './App.css'
 import {
+  AlertsApp,
   EsignatureApp,
   LikeMyPhotoApp,
   RandomizeColorsApp,
@@ -15,7 +16,8 @@ function App() {
         {/* <EsignatureApp /> */}
         {/* <RandomizeColorsApp /> */}
         {/* <LikeMyPhotoApp /> */}
-        <TestimonialsApp />
+        {/* <TestimonialsApp /> */}
+        <AlertsApp />
       </div>
     </div>
   )
