@@ -35,3 +35,33 @@ There will be three (3) alerts one of which will disappear after a delay of appr
 You will also be able to click on an alert and it disappears completely. They will also disappear all at once after a delay.
 
 We will employ _useState_ and _useEffect_ hooks to manage the state of the component.
+
+## Project 06: Temperature Controller App
+
+In this project, you will create a small temperature monitor that will contain a plus (+) and a minus (-) button which will be used to increase and decrease the temperature respectively.
+
+As temperature changes, the background of the monitor will be changed accordingly; red to signify that temperature has increased and blue to signify that temperature has decreased.
+
+## Project 07: Dark Mode App
+
+In this project, you will go to the dark side and then to the light side. You will create a dark and light theme for your web pages. Basically, on the push of a button, the page will turn dark and light when the button is re-clicked.
+
+You will employ the hook _useContext_ together with context provider
+
+## Project 08: Lockscreen App
+
+In this project, you will create a lock screen page. You will employ the use of a slider that when utilized, will unlock the lock screen, and to lock the screen, a lock button can be clicked.
+
+You will use hooks like _useState, \_useEffect_, and the React Icons package.
+
+## Project 09: Slider App
+
+In this project, you will create a slider that when slid, causes a tiny circle to grow concurrently into a big circle. As it grows, the color of the text and background of the circle will also change.
+
+The most important lesson to be learned is passing down props. You will use hooks like _useState_
+
+## Project 10: Hidden Search Bar App
+
+You will create a hidden search bar which will be activated by a little loop icon. As soon as it is clicked, the search bar will appear, and also the screen will darken. If you click somewhere else, the app is going to defocus and the search bar will disappear.
+
+There will also be an automatic focus on the input of the search bar. You will use hooks like _useState, \_useEffect_, and for the very first time _useRef_ hook as well as the React Icons package.
