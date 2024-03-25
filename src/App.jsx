@@ -6,6 +6,7 @@ import {
   EsignatureApp,
   LikeMyPhotoApp,
   RandomizeColorsApp,
+  TemperatureControllerApp,
   TestimonialsApp,
 } from './Projects'
 
@@ -17,7 +18,8 @@ function App() {
         {/* <RandomizeColorsApp /> */}
         {/* <LikeMyPhotoApp /> */}
         {/* <TestimonialsApp /> */}
-        <AlertsApp />
+        {/* <AlertsApp /> */}
+        <TemperatureControllerApp />
       </div>
     </div>
   )
