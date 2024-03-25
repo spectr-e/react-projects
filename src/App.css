@@ -577,6 +577,7 @@ body {
 }
 .btn-light {
   background-color: #f8f9fa;
+  color: black;
 }
 .btn-light:hover {
   background: rgba(248, 249, 250, 0.75);

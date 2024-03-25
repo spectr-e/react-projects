@@ -4,6 +4,7 @@ import './App.css'
 import {
   AlertsApp,
   EsignatureApp,
+  LightDarkModeApp,
   LikeMyPhotoApp,
   RandomizeColorsApp,
   TemperatureControllerApp,
@@ -19,7 +20,8 @@ function App() {
         {/* <LikeMyPhotoApp /> */}
         {/* <TestimonialsApp /> */}
         {/* <AlertsApp /> */}
-        <TemperatureControllerApp />
+        {/* <TemperatureControllerApp /> */}
+        <LightDarkModeApp />
       </div>
     </div>
   )
