@@ -6,7 +6,12 @@ import AlertsApp from './05-alerts-app/AlertsApp'
 import TemperatureControllerApp from './06-temperature-controller-app/TemperatureControllerApp'
 import LightDarkModeApp from './07-light-dark-mode-app/LightDarkModeApp'
 import Blog from './07-light-dark-mode-app/Blog'
+import SlideToUnlockApp from './08-slide-to-unlock-app/SlideToUnlockApp'
+import LockSlider from './08-slide-to-unlock-app/LockSlider'
+
 export {
+  LockSlider,
+  SlideToUnlockApp,
   Blog,
   LightDarkModeApp,
   TemperatureControllerApp,
