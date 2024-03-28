@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const Slider = ({ handleInput, bgColor, textColor, radius }) => {
   const sliderStyle = {
     appearance: 'none',

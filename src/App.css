@@ -118,6 +118,15 @@ body {
 }
 
 /* Text */
+.text-black {
+  color: black;
+}
+.text-white {
+  color: white;
+}
+.text-gray {
+  color: gray;
+}
 .text-left {
   text-align: left;
 }

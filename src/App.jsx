@@ -4,6 +4,7 @@ import './App.css'
 import {
   AlertsApp,
   EsignatureApp,
+  HiddenSearchBarApp,
   LightDarkModeApp,
   LikeMyPhotoApp,
   RandomizeColorsApp,
@@ -25,7 +26,8 @@ function App() {
         {/* <TemperatureControllerApp /> */}
         {/* <LightDarkModeApp /> */}
         {/* <SlideToUnlockApp /> */}
-        <SliderApp />
+        {/* <SliderApp /> */}
+        <HiddenSearchBarApp />
       </div>
     </div>
   )
