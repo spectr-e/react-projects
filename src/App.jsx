@@ -7,6 +7,7 @@ import {
   LightDarkModeApp,
   LikeMyPhotoApp,
   RandomizeColorsApp,
+  SliderApp,
   SlideToUnlockApp,
   TemperatureControllerApp,
   TestimonialsApp,
@@ -23,7 +24,8 @@ function App() {
         {/* <AlertsApp /> */}
         {/* <TemperatureControllerApp /> */}
         {/* <LightDarkModeApp /> */}
-        <SlideToUnlockApp />
+        {/* <SlideToUnlockApp /> */}
+        <SliderApp />
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import './LockSlider.css'
+import '../Projects/08-slide-to-unlock-app/LockSlider.css'
 
 const LockSlider = ({ handleInput, sliderVal, width }) => {
   const sliderStyle = {

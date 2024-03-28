@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { LockSlider } from '../../Projects'
+import { LockSlider } from '../../components'
 import { AiFillUnlock } from 'react-icons/ai'
 import { HomeImg, LockImg } from '../../assets'
 
