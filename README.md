@@ -86,4 +86,8 @@ You will create a dialog box that will prompt the user to subscribe as soon as t
 
 You will employ the use of _React Icons, \_useState_, and _useEffect_.
 
-You will create a game in that when the launch button is clicked, the rocket from Earth will launch into space to the moon and it will slowly disappear. When the land button is clicked, instead of a rocket landing from the moon, a penguin will be landed instead on Earth.
+## Project 14: Filter Contacts App
+
+You will create a contact application which will also be searchable. The user will be able to filter contacts through their first name. You will employ the following hooks: _useState_, _useEffect_, _useRef_.
+
+You will also learn how to import data from a JSON file and then export it to your UI.
