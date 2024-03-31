@@ -9,8 +9,10 @@ import Blog from './07-light-dark-mode-app/Blog'
 import SlideToUnlockApp from './08-slide-to-unlock-app/SlideToUnlockApp'
 import SliderApp from './09-slider-app/SliderApp'
 import HiddenSearchBarApp from './10-hidden-searchbar-app/HiddenSearchBarApp'
+import MagicPopupApp from './11-magic-popup-app/MagicPopupApp'
 
 export {
+  MagicPopupApp,
   HiddenSearchBarApp,
   SliderApp,
   SlideToUnlockApp,

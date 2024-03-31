@@ -7,6 +7,7 @@ import {
   HiddenSearchBarApp,
   LightDarkModeApp,
   LikeMyPhotoApp,
+  MagicPopupApp,
   RandomizeColorsApp,
   SliderApp,
   SlideToUnlockApp,
@@ -27,7 +28,8 @@ function App() {
         {/* <LightDarkModeApp /> */}
         {/* <SlideToUnlockApp /> */}
         {/* <SliderApp /> */}
-        <HiddenSearchBarApp />
+        {/* <HiddenSearchBarApp /> */}
+        <MagicPopupApp />
       </div>
     </div>
   )
