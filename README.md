@@ -98,3 +98,9 @@ You will create a simple registration form with basic validation. When the proje
 Validation alerts will be displayed upon errors like missing values in fields. You will also condition the application to automatically jump to the next empty field suppose a user tries to register with unfilled fields.
 
 Upon successful registration, the form will disappear and a successful alert will be shown. You will employ the following hooks: _useState_, _useEffect_, _useRef_. You will also use the alert component, title component, and the button component.
+
+## Project 16: Notes App
+
+You will create a note app where a user can click on a new note button, add a note and they are able to delete it. You can add several notes and adjust their size accordingly where they will arrange themselves in real time.
+
+Every time you generate a new note, it will have a new background color. You will use _style components_ for the very first time; _useState_, _useEffect_, and more.
