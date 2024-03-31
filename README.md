@@ -71,3 +71,11 @@ There will also be an automatic focus on the input of the search bar. You will u
 You will create a popup component that will be utilized differently in the application. One will be a timeout popup i.e., it will be triggered after a specified amount of time, and it is going to block the entire page preventing the user from interacting with any other components of the page.
 
 There, of course, will be a button on the page that when clicked will trigger another popup - the second popup. However, both popups will draw from the main popup component.
+
+## Project 12: Progress Tracker App
+
+You will basically create a project status tracker by creating a couple of progress bars. You will create a progress bar component and utilize several important hooks like _useState_, _useEffect_, _useRef_, and a couple of methods like _map_ and _math_.
+
+You will provide three input fields when the level of progress is inputted, the progress bar responsible for the specific field will move automatically to reflect the current values. The same functionality will be carried over to the other progress bars in the project.
+
+You will also include a randomly generated status for the bottom progress bar.
