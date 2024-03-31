@@ -91,3 +91,10 @@ You will employ the use of _React Icons, \_useState_, and _useEffect_.
 You will create a contact application which will also be searchable. The user will be able to filter contacts through their first name. You will employ the following hooks: _useState_, _useEffect_, _useRef_.
 
 You will also learn how to import data from a JSON file and then export it to your UI.
+
+## Project 15: Registration Form App
+
+You will create a simple registration form with basic validation. When the project loads, it will autofocus your input fields.
+Validation alerts will be displayed upon errors like missing values in fields. You will also condition the application to automatically jump to the next empty field suppose a user tries to register with unfilled fields.
+
+Upon successful registration, the form will disappear and a successful alert will be shown. You will employ the following hooks: _useState_, _useEffect_, _useRef_. You will also use the alert component, title component, and the button component.
