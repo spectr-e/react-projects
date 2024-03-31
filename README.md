@@ -79,3 +79,11 @@ You will basically create a project status tracker by creating a couple of progr
 You will provide three input fields when the level of progress is inputted, the progress bar responsible for the specific field will move automatically to reflect the current values. The same functionality will be carried over to the other progress bars in the project.
 
 You will also include a randomly generated status for the bottom progress bar.
+
+## Project 13: Dialog Box App
+
+You will create a dialog box that will prompt the user to subscribe as soon as the page loads; the user can also unsubscribe as soon as they subscribe. When they click on unsubscribe another dialog box will appear.
+
+You will employ the use of _React Icons, \_useState_, and _useEffect_.
+
+You will create a game in that when the launch button is clicked, the rocket from Earth will launch into space to the moon and it will slowly disappear. When the land button is clicked, instead of a rocket landing from the moon, a penguin will be landed instead on Earth.
