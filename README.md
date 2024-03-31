@@ -114,3 +114,7 @@ You will create a navigational component that will be responsive to different ty
 You will create a text animation by installing an animation component using the node package manager. You will also create a form group component that will accept user input and upon submission, will render a text animation on the page.
 
 You will employ the following hooks: _useState_ and, _useEffect_.
+
+## Project 19: Compound Interest Rate Calculator App
+
+You will create an application that will calculate the interest rate of whatever investment the user wants to make. It could be a one-time investment project or a mutliple investment project.
