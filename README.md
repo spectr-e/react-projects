@@ -118,3 +118,7 @@ You will employ the following hooks: _useState_ and, _useEffect_.
 ## Project 19: Compound Interest Rate Calculator App
 
 You will create an application that will calculate the interest rate of whatever investment the user wants to make. It could be a one-time investment project or a mutliple investment project.
+
+## Project 20: Space Penguin App
+
+You will create a game in that when the launch button is clicked, the rocket from Earth will launch into space to the moon and it will slowly disappear. When the land button is clicked, instead of a rocket landing from the moon, a penguin will be landed instead on Earth.
