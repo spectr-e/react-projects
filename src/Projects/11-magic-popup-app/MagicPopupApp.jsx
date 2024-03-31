@@ -7,18 +7,18 @@ const MagicPopupApp = () => {
   const triggerPopup = () => {
     setTrigger(true)
   }
-
+  let timeout = 2000
   useEffect(() => {
     setTimeout(() => {
       setTimeTrigger(true)
-    }, 2000)
+    }, timeout)
   }, [])
 
   return (
     <div className='text-center'>
       <Title title={'Magic Popup App'} />
       <Title
-        title={'Click for popup, or wait for 3 sec'}
+        title={`Click for popup, or wait for ${timeout / 1000} sec`}
         classes={'subtitle'}
       />
       <Button classes={'btn-primary'} handleClick={triggerPopup} />
