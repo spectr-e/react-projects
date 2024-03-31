@@ -104,3 +104,7 @@ Upon successful registration, the form will disappear and a successful alert wil
 You will create a note app where a user can click on a new note button, add a note and they are able to delete it. You can add several notes and adjust their size accordingly where they will arrange themselves in real time.
 
 Every time you generate a new note, it will have a new background color. You will use _style components_ for the very first time; _useState_, _useEffect_, and more.
+
+## Project 17: Responsive Navigation App
+
+You will create a navigational component that will be responsive to different types of screen sizes. You will employ the use of _React Icons, \_style components_, \_useState*, and \_useEffect*.
