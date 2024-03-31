@@ -46,7 +46,7 @@ As temperature changes, the background of the monitor will be changed accordingl
 
 In this project, you will go to the dark side and then to the light side. You will create a dark and light theme for your web pages. Basically, on the push of a button, the page will turn dark and light when the button is re-clicked.
 
-You will employ the hook _useContext_ together with context provider
+You will employ the hook _useContext_ together with the context provider
 
 ## Project 08: Lockscreen App
 
@@ -65,3 +65,9 @@ The most important lesson to be learned is passing down props. You will use hook
 You will create a hidden search bar which will be activated by a little loop icon. As soon as it is clicked, the search bar will appear, and also the screen will darken. If you click somewhere else, the app is going to defocus and the search bar will disappear.
 
 There will also be an automatic focus on the input of the search bar. You will use hooks like _useState, \_useEffect_, and for the very first time _useRef_ hook as well as the React Icons package.
+
+## Project 11: Magic Popup App
+
+You will create a popup component that will be utilized differently in the application. One will be a timeout popup i.e., it will be triggered after a specified amount of time, and it is going to block the entire page preventing the user from interacting with any other components of the page.
+
+There, of course, will be a button on the page that when clicked will trigger another popup - the second popup. However, both popups will draw from the main popup component.
