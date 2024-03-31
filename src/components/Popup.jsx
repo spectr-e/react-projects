@@ -1,6 +1,6 @@
 import Button from './Button'
 
-const Popup = ({ type, title, text }) => {
+const Popup = ({ type, title, text, handleClose, trigger }) => {
   const popupContainer = {
     position: 'absolute',
     top: 0,
@@ -14,19 +14,25 @@ const Popup = ({ type, title, text }) => {
     margin: '40vh auto',
     zIndex: 1,
   }
-  const handleClose = () => {}
+
   return (
-    <div style={popupContainer}>
-      <div className={`${type}`} style={popupStyle}>
-        <div className='alert-close'>
-          <div className='d-flex flex-column'>
-            <h4 className='mb-1'>{title && title}</h4>
-            <p>{text && text}</p>
+    trigger && (
+      <div style={popupContainer}>
+        <div className={`${type}`} style={popupStyle}>
+          <div className='alert-close'>
+            <div className='d-flex flex-column'>
+              <h4 className='mb-1'>{title && title}</h4>
+              <p>{text && text}</p>
+            </div>
+            <Button
+              classes={'btn-close'}
+              text={'X'}
+              handleClick={() => handleClose(false)}
+            />
           </div>
-          <Button classes={'btn-close'} text={'X'} handleClick={handleClose} />
         </div>
       </div>
-    </div>
+    )
   )
 }
 
