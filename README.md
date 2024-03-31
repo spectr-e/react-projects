@@ -108,3 +108,9 @@ Every time you generate a new note, it will have a new background color. You wil
 ## Project 17: Responsive Navigation App
 
 You will create a navigational component that will be responsive to different types of screen sizes. You will employ the use of _React Icons, \_style components_, \_useState*, and \_useEffect*.
+
+## Project 18: Text Animation App
+
+You will create a text animation by installing an animation component using the node package manager. You will also create a form group component that will accept user input and upon submission, will render a text animation on the page.
+
+You will employ the following hooks: _useState_ and, _useEffect_.
