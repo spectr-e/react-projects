@@ -35,13 +35,15 @@ const ProgressTrackerApp = () => {
   const handleChange = (e) => {
     switch (e.target.name) {
       case 'UI':
-        setUi(e.target.value)
+        setStatus({ ...status, ui: e.target.value })
         break
       case 'UX':
-        setUx(e.target.value)
+        setStatus({ ...status, ux: e.target.value })
+
         break
       case 'DATA':
-        setData(e.target.value)
+        setStatus({ ...status, data: e.target.value })
+
         break
     }
   }
