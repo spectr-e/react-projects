@@ -89,6 +89,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.dsf {
+  display: flex;
+}
 .jcc {
   justify-content: center;
 }
@@ -115,6 +118,15 @@ body {
 }
 .d-grid {
   display: grid;
+}
+.gap-4 {
+  gap: 4;
+}
+.gap-8 {
+  gap: 8;
+}
+.gap-16 {
+  gap: 16;
 }
 
 /* Text */
