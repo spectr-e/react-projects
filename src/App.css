@@ -389,20 +389,20 @@ body {
 }
 
 /* Title & Subtitle */
-.title {
-  font-size: 60px;
-  font-weight: 500;
-  margin: 32px 0;
-}
 .title-main {
   font-size: 80px;
-  font-weight: 600;
-  margin: 32px 0;
+  font-weight: 900;
+  margin: 24px 0;
+}
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 24px 0;
 }
 .subtitle {
   font-size: 32px;
-  font-weight: 400;
-  margin: 32px 0;
+  font-weight: 500;
+  margin: 24px 0;
 }
 
 /* Colors */

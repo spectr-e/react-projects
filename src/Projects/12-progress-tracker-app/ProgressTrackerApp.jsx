@@ -1,7 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ProgressBar, Title } from '../../components'
 
 const ProgressTrackerApp = () => {
+  const uiInput = useRef(null)
+  const uxInput = useRef(null)
+  const dataInput = useRef(null)
+
+  useEffect(() => {
+    uiInput.current.focus()
+  }, [])
+
   const [ui, setUi] = useState('')
   const [ux, setUx] = useState('')
   const [data, setData] = useState('')
@@ -22,13 +30,14 @@ const ProgressTrackerApp = () => {
 
   const inputStyle = {
     border: 'none',
-    borderBottom: '1px solid black',
+    borderBottom: '1px dotted black',
     outline: 'none',
     fontSize: '20px',
     width: '120px',
     textAlign: 'center',
     fontWeight: 600,
   }
+
   const labelStyle = {
     fontWeight: 600,
     fontSize: '20px',
@@ -36,49 +45,52 @@ const ProgressTrackerApp = () => {
   return (
     <div className='container'>
       <Title title={'Progress Tracker App'} classes={'title text-center'} />
-      <Title title={'Project Status'} classes={'text-center'} />
+      <Title title={'Project Status'} classes={'subtitle text-center'} />
 
       <div className='dsf flex-column aic'>
         <div className=' dsf flex-column gap-16'>
           {/* Project One */}
           <div style={{ display: 'flex', gap: 36, alignItems: 'center' }}>
             <label htmlFor='ui' style={labelStyle}>
-              UI
+              UI status :
             </label>
             <input
-              type='text'
+              type='number'
               name='UI'
               style={inputStyle}
               value={ui}
               onChange={handleChange}
+              ref={uiInput}
             />
           </div>
 
           {/* Project Two */}
           <div style={{ display: 'flex', gap: 32, alignItems: 'center' }}>
             <label htmlFor='UX' style={labelStyle}>
-              UX
+              UX status :
             </label>
             <input
-              type='text'
+              type='number'
               name='UX'
               style={inputStyle}
               value={ux}
               onChange={handleChange}
+              ref={uxInput}
             />
           </div>
 
           {/* Project Three */}
           <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
             <label htmlFor='DATA' style={labelStyle}>
-              DATA
+              DATA status :
             </label>
             <input
-              type='text'
+              type='number'
               name='DATA'
               style={inputStyle}
               value={data}
               onChange={handleChange}
+              ref={dataInput}
             />
           </div>
         </div>
