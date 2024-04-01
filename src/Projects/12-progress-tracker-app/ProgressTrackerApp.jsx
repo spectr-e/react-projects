@@ -8,6 +8,9 @@ const ProgressTrackerApp = () => {
 
   useEffect(() => {
     uiInput.current.focus()
+    setInterval(() => {
+      setCompleted(Math.floor(Math.random() * 100) + 1)
+    }, 2000)
   }, [])
 
   const [completed, setCompleted] = useState(0)
@@ -39,7 +42,6 @@ const ProgressTrackerApp = () => {
         break
       case 'UX':
         setStatus({ ...status, ux: e.target.value })
-
         break
       case 'DATA':
         setStatus({ ...status, data: e.target.value })
@@ -123,6 +125,10 @@ const ProgressTrackerApp = () => {
           completed={data.completed}
         />
       ))}
+      <ProgressBar
+        bgColor={completed > 50 ? '#28a745' : '#7633f9'}
+        completed={completed}
+      />
     </div>
   )
 }
