@@ -14,6 +14,7 @@ import {
   SlideToUnlockApp,
   TemperatureControllerApp,
   TestimonialsApp,
+  DialogBoxApp,
 } from './Projects'
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
         {/* <SliderApp /> */}
         {/* <HiddenSearchBarApp /> */}
         {/* <MagicPopupApp /> */}
-        <ProgressTrackerApp />
+        {/* <ProgressTrackerApp /> */}
+        <DialogBoxApp />
       </div>
     </div>
   )

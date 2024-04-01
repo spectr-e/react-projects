@@ -11,8 +11,10 @@ import SliderApp from './09-slider-app/SliderApp'
 import HiddenSearchBarApp from './10-hidden-searchbar-app/HiddenSearchBarApp'
 import MagicPopupApp from './11-magic-popup-app/MagicPopupApp'
 import ProgressTrackerApp from './12-progress-tracker-app/ProgressTrackerApp'
+import DialogBoxApp from './13-dialog-box-app/DialogBoxApp'
 
 export {
+  DialogBoxApp,
   ProgressTrackerApp,
   MagicPopupApp,
   HiddenSearchBarApp,
