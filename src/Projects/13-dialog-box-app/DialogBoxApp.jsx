@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Button } from '../../components'
 import { BsEmojiSmileFill, BsEmojiFrownFill } from 'react-icons/bs'
+import './Bounce.css'
 
 const DialogBoxApp = ({ width = 360 }) => {
   const [icon, setIcon] = useState()
+  const [bounce, setBounce] = useState('')
   const [subscription, setSubscription] = useState({
     title: 'Hello!',
     descr: 'Would you like to subscribe?',
@@ -55,8 +57,18 @@ const DialogBoxApp = ({ width = 360 }) => {
     }
   }, [subscription.state])
 
+  useEffect(() => {
+    setTimeout(() => {
+      setBounce('')
+    }, 500)
+    return () => setBounce('bounce')
+  }, [subscription.state])
+
   return (
-    <div className='card bg-light m-auto mt-4' style={{ width: width }}>
+    <div
+      className={`card bg-light m-auto mt-4 ${bounce}`}
+      style={{ width: width }}
+    >
       <div className='card-body'>
         <div
           className='d-grid aic jcc'
