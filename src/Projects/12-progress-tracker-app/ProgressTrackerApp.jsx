@@ -10,9 +10,27 @@ const ProgressTrackerApp = () => {
     uiInput.current.focus()
   }, [])
 
-  const [ui, setUi] = useState('')
-  const [ux, setUx] = useState('')
-  const [data, setData] = useState('')
+  const [completed, setCompleted] = useState(0)
+  const [status, setStatus] = useState({
+    ui: 33,
+    ux: 60,
+    data: 88,
+  })
+
+  const projectData = [
+    {
+      bgColor: '#7633f9',
+      completed: status.ui,
+    },
+    {
+      bgColor: '#28a745',
+      completed: status.ux,
+    },
+    {
+      bgColor: '#dc3545',
+      completed: status.data,
+    },
+  ]
 
   const handleChange = (e) => {
     switch (e.target.name) {
@@ -42,6 +60,7 @@ const ProgressTrackerApp = () => {
     fontWeight: 600,
     fontSize: '20px',
   }
+
   return (
     <div className='container'>
       <Title title={'Progress Tracker App'} classes={'title text-center'} />
@@ -58,7 +77,7 @@ const ProgressTrackerApp = () => {
               type='number'
               name='UI'
               style={inputStyle}
-              value={ui}
+              value={status.ui}
               onChange={handleChange}
               ref={uiInput}
             />
@@ -73,7 +92,7 @@ const ProgressTrackerApp = () => {
               type='number'
               name='UX'
               style={inputStyle}
-              value={ux}
+              value={status.ux}
               onChange={handleChange}
               ref={uxInput}
             />
@@ -88,14 +107,20 @@ const ProgressTrackerApp = () => {
               type='number'
               name='DATA'
               style={inputStyle}
-              value={data}
+              value={status.data}
               onChange={handleChange}
               ref={dataInput}
             />
           </div>
         </div>
       </div>
-      <ProgressBar />
+      {projectData.map((data, index) => (
+        <ProgressBar
+          key={index}
+          bgColor={data.bgColor}
+          completed={data.completed}
+        />
+      ))}
     </div>
   )
 }

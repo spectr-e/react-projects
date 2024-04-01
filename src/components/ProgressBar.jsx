@@ -9,7 +9,7 @@ export const ProgressBar = ({ bgColor, completed }) => {
   const fillerStyles = {
     backgroundColor: bgColor,
     height: '100%',
-    width: `${completed}`,
+    width: `${completed}%`,
     borderRadius: 'inherit',
     textAlign: 'right',
     transition: 'width 1s ease-in-out',
