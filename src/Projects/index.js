@@ -10,8 +10,10 @@ import SlideToUnlockApp from './08-slide-to-unlock-app/SlideToUnlockApp'
 import SliderApp from './09-slider-app/SliderApp'
 import HiddenSearchBarApp from './10-hidden-searchbar-app/HiddenSearchBarApp'
 import MagicPopupApp from './11-magic-popup-app/MagicPopupApp'
+import ProgressTrackerApp from './12-progress-tracker-app/ProgressTrackerApp'
 
 export {
+  ProgressTrackerApp,
   MagicPopupApp,
   HiddenSearchBarApp,
   SliderApp,
