@@ -5,10 +5,6 @@ const FilterContactApp = () => {
   const inputRef = useRef(null)
   const [searchVal, setSearchVal] = useState('')
 
-  const handleSearch = (e) => {
-    setSearchVal(e.target.value)
-  }
-
   useEffect(() => {
     inputRef.current.focus()
   }, [])
@@ -23,7 +19,7 @@ const FilterContactApp = () => {
         className='mb-2 text-center font-md'
         placeholder='Search by name'
         value={searchVal}
-        onChange={handleSearch}
+        onChange={(e) => setSearchVal(e.target.value)}
         ref={inputRef}
         style={{
           padding: '4px 8px',
@@ -32,15 +28,28 @@ const FilterContactApp = () => {
 
       {/* Contacts Section */}
       <section
-        className='d-flex m-auto gap-16'
+        className='d-flex m-auto'
         style={{
-          maxWidth: 1600,
+          maxWidth: '1600px',
           flexWrap: 'wrap',
+          gap: 16,
         }}
       >
-        {data.map((contact) => (
-          <Contact key={contact.id} data={contact} textColor={'text-dark'} />
-        ))}
+        {data
+          .filter((contact) => {
+            if (!contact) {
+              return contact
+            } else if (
+              contact.first_name
+                .toLocaleLowerCase()
+                .includes(searchVal.toLocaleLowerCase())
+            ) {
+              return contact
+            }
+          })
+          .map((contact) => (
+            <Contact key={contact.id} data={contact} textColor={'text-dark'} />
+          ))}
       </section>
     </div>
   )
