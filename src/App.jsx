@@ -15,6 +15,7 @@ import {
   TemperatureControllerApp,
   TestimonialsApp,
   DialogBoxApp,
+  FilterContactApp,
 } from './Projects'
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
         {/* <HiddenSearchBarApp /> */}
         {/* <MagicPopupApp /> */}
         {/* <ProgressTrackerApp /> */}
-        <DialogBoxApp />
+        {/* <DialogBoxApp /> */}
+        <FilterContactApp />
       </div>
     </div>
   )
