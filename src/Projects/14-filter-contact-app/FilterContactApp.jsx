@@ -35,10 +35,11 @@ const FilterContactApp = () => {
         className='d-flex m-auto gap-16'
         style={{
           maxWidth: 1600,
+          flexWrap: 'wrap',
         }}
       >
         {data.map((contact) => (
-          <Contact key={contact.id} data={contact} />
+          <Contact key={contact.id} data={contact} textColor={'text-dark'} />
         ))}
       </section>
     </div>
