@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Title } from '../../components'
+import { Contact, Title } from '../../components'
 import { data } from '../../data'
 const FilterContactApp = () => {
   const inputRef = useRef(null)
@@ -38,9 +38,7 @@ const FilterContactApp = () => {
         }}
       >
         {data.map((contact) => (
-          <ul key={contact.id}>
-            <li>{contact.last_name}</li>
-          </ul>
+          <Contact key={contact.id} data={contact} />
         ))}
       </section>
     </div>

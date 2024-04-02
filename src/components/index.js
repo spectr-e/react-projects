@@ -5,5 +5,6 @@ import LockSlider from './LockSlider'
 import Slider from './Slider'
 import Popup from './Popup'
 import { ProgressBar } from './ProgressBar'
+import Contact from './Contact'
 
-export { ProgressBar, Popup, Title, Button, Alert, LockSlider, Slider }
+export { Contact, ProgressBar, Popup, Title, Button, Alert, LockSlider, Slider }
