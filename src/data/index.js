@@ -1,3 +1,3 @@
-import Data from './data.json'
+import data from './data.json'
 
-export { Data }
+export { data }
