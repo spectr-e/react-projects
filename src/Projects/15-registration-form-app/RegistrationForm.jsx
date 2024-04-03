@@ -32,6 +32,13 @@ const RegistrationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (!values.name) {
+      inputName.current.focus()
+    } else if (!values.email) {
+      inputEmail.current.focus()
+    } else if (!values.password) {
+      inputPassword.current.focus()
+    }
   }
 
   return (
