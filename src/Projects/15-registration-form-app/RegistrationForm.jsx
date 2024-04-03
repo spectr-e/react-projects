@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Button, Title } from '../../components'
 
 const RegistrationForm = () => {
@@ -6,9 +6,29 @@ const RegistrationForm = () => {
   const inputEmail = useRef(null)
   const inputPassword = useRef(null)
 
+  const [values, setValues] = useState({
+    username: '',
+    email: '',
+    password: '',
+  })
+
   useEffect(() => {
     inputName.current.focus()
   }, [])
+
+  const handleChange = (e) => {
+    switch (e.target.name) {
+      case 'fullname':
+        setValues({ ...values, name: e.target.value })
+        break
+      case 'email':
+        setValues({ ...values, email: e.target.value })
+        break
+      case 'password':
+        setValues({ ...values, password: e.target.value })
+        break
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -26,6 +46,8 @@ const RegistrationForm = () => {
               placeholder='Enter your name'
               name='fullname'
               ref={inputName}
+              value={values.name}
+              onChange={handleChange}
             />
             <label htmlFor='fullname' className='text-danger font-sm'>
               Please enter your name
@@ -39,6 +61,8 @@ const RegistrationForm = () => {
               placeholder='Enter your email'
               name='email'
               ref={inputEmail}
+              value={values.email}
+              onChange={handleChange}
             />
             <label htmlFor='email' className='text-danger font-sm'>
               Please enter your email
@@ -52,6 +76,8 @@ const RegistrationForm = () => {
               placeholder='Enter your password'
               name='password'
               ref={inputPassword}
+              value={values.password}
+              onChange={handleChange}
             />
             <label htmlFor='password' className='text-danger font-sm'>
               Please enter your password
