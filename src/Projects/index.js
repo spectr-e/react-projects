@@ -13,8 +13,10 @@ import MagicPopupApp from './11-magic-popup-app/MagicPopupApp'
 import ProgressTrackerApp from './12-progress-tracker-app/ProgressTrackerApp'
 import DialogBoxApp from './13-dialog-box-app/DialogBoxApp'
 import FilterContactApp from './14-filter-contact-app/FilterContactApp'
+import RegistrationForm from './15-registration-form-app/RegistrationForm'
 
 export {
+  RegistrationForm,
   FilterContactApp,
   DialogBoxApp,
   ProgressTrackerApp,

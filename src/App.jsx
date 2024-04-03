@@ -16,6 +16,7 @@ import {
   TestimonialsApp,
   DialogBoxApp,
   FilterContactApp,
+  RegistrationForm,
 } from './Projects'
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
         {/* <MagicPopupApp /> */}
         {/* <ProgressTrackerApp /> */}
         {/* <DialogBoxApp /> */}
-        <FilterContactApp />
+        {/* <FilterContactApp /> */}
+        <RegistrationForm />
       </div>
     </div>
   )
