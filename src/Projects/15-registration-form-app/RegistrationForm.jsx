@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { Button, Title } from '../../components'
+import { Alert, Button, Title } from '../../components'
 
 const RegistrationForm = () => {
   const inputName = useRef(null)
   const inputEmail = useRef(null)
   const inputPassword = useRef(null)
 
+  const [submit, setSubmit] = useState(false)
   const [values, setValues] = useState({
     username: '',
     email: '',
@@ -38,11 +39,19 @@ const RegistrationForm = () => {
       inputEmail.current.focus()
     } else if (!values.password) {
       inputPassword.current.focus()
+    } else {
+      setSubmit(true)
+      setValues({
+        name: '',
+        email: '',
+        password: '',
+      })
     }
   }
 
   return (
     <div className='m-auto'>
+      {/* Form Design */}
       <div className='container bg-light text-dark mt-4 p-2 shadow-sm border-5 w-50'>
         <Title title={'Register'} />
         <form action='' className='' onSubmit={handleSubmit}>
@@ -56,9 +65,11 @@ const RegistrationForm = () => {
               value={values.name}
               onChange={handleChange}
             />
-            <label htmlFor='fullname' className='text-danger font-sm'>
-              Please enter your name
-            </label>
+            {submit && !values.name ? (
+              <label htmlFor='fullname' className='text-danger font-sm'>
+                Please enter your name
+              </label>
+            ) : null}
           </div>
 
           {/* Email Field */}
@@ -71,9 +82,11 @@ const RegistrationForm = () => {
               value={values.email}
               onChange={handleChange}
             />
-            <label htmlFor='email' className='text-danger font-sm'>
-              Please enter your email
-            </label>
+            {submit && values.email ? (
+              <label htmlFor='email' className='text-danger font-sm'>
+                Please enter your email
+              </label>
+            ) : null}
           </div>
 
           {/* Password Field */}
@@ -86,9 +99,11 @@ const RegistrationForm = () => {
               value={values.password}
               onChange={handleChange}
             />
-            <label htmlFor='password' className='text-danger font-sm'>
-              Please enter your password
-            </label>
+            {submit && values.password ? (
+              <label htmlFor='password' className='text-danger font-sm'>
+                Please enter your password
+              </label>
+            ) : null}
           </div>
 
           {/* Submit Button */}
