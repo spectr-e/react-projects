@@ -1,25 +1,25 @@
-const NavBar = () => {
+import { NavItem } from '../../components'
+import { NavStyle } from './NavStyle'
+
+const NavBarApp = () => {
   return (
-    <nav>
+    <NavStyle className='navbar bg-primary text-light'>
       <div className='navbar-logo'>
         <a href='#' className='navbar-brand'>
           Kamauu
         </a>
-
         {/* Open & Close Icons */}
       </div>
 
       <div className='navbar-collapse'>
         <ul className='navbar-items'>
-          <li className='nav-item'>
-            <a href='#' className='nav-link'>
-              Home
-            </a>
-          </li>
+          <NavItem text={'Home'} active='active' />
+          <NavItem text={'About'} />
+          <NavItem text={'Contact'} />
         </ul>
       </div>
-    </nav>
+    </NavStyle>
   )
 }
 
-export default NavBar
+export default NavBarApp

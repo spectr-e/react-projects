@@ -41,7 +41,7 @@ function App() {
         {/* <FilterContactApp /> */}
         {/* <RegistrationForm /> */}
         {/* <NotesApp /> */}
-        <NavBar />
+        <NavBarApp />
       </div>
     </div>
   )
