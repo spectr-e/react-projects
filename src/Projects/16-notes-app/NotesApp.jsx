@@ -23,8 +23,8 @@ const NotesApp = () => {
       />
 
       <div
-        className='container container-sm d-flex gap-24'
-        style={{ flexWrap: 'wrap' }}
+        className='container container-sm d-flex'
+        style={{ flexWrap: 'wrap', gap: 24 }}
       >
         {notes.map((note, index) => (
           <Notes key={index} note={note} onClick={handleDelNote} />
