@@ -18,7 +18,7 @@ import {
   FilterContactApp,
   RegistrationForm,
   NotesApp,
-  NavBar,
+  NavBarApp,
 } from './Projects'
 
 function App() {
