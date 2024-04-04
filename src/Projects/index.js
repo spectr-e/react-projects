@@ -16,8 +16,10 @@ import FilterContactApp from './14-filter-contact-app/FilterContactApp'
 import RegistrationForm from './15-registration-form-app/RegistrationForm'
 import NotesApp from './16-notes-app/NotesApp'
 import { NotesStyle, Icons, DeleteIcon } from './16-notes-app/NotesStyle'
+import NavBar from './17-responsive-navigation-app/NavBar'
 
 export {
+  NavBar,
   DeleteIcon,
   Icons,
   NotesStyle,

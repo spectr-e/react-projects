@@ -18,6 +18,7 @@ import {
   FilterContactApp,
   RegistrationForm,
   NotesApp,
+  NavBar,
 } from './Projects'
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
         {/* <DialogBoxApp /> */}
         {/* <FilterContactApp /> */}
         {/* <RegistrationForm /> */}
-        <NotesApp />
+        {/* <NotesApp /> */}
+        <NavBar />
       </div>
     </div>
   )
