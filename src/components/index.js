@@ -6,5 +6,16 @@ import Slider from './Slider'
 import Popup from './Popup'
 import { ProgressBar } from './ProgressBar'
 import Contact from './Contact'
+import Notes from './Notes'
 
-export { Contact, ProgressBar, Popup, Title, Button, Alert, LockSlider, Slider }
+export {
+  Notes,
+  Contact,
+  ProgressBar,
+  Popup,
+  Title,
+  Button,
+  Alert,
+  LockSlider,
+  Slider,
+}
