@@ -14,8 +14,10 @@ import ProgressTrackerApp from './12-progress-tracker-app/ProgressTrackerApp'
 import DialogBoxApp from './13-dialog-box-app/DialogBoxApp'
 import FilterContactApp from './14-filter-contact-app/FilterContactApp'
 import RegistrationForm from './15-registration-form-app/RegistrationForm'
+import NotesApp from './16-notes-app/NotesApp'
 
 export {
+  NotesApp,
   RegistrationForm,
   FilterContactApp,
   DialogBoxApp,
