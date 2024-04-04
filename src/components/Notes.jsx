@@ -1,8 +1,16 @@
+import { useEffect, useState } from 'react'
 import { DeleteIcon, Icons, NotesStyle } from '../Projects'
 import { MdOutlineNoteAlt, MdDeleteForever } from 'react-icons/md'
-const Notes = ({ note, onClick, text }) => {
+
+const Notes = ({ note, onClick, text, bg }) => {
+  const [cardBg, setCardBg] = useState('')
+
+  useEffect(() => {
+    !cardBg && setCardBg(bg)
+  }, [cardBg])
+
   return (
-    <NotesStyle className='card'>
+    <NotesStyle className={`card ${cardBg}`}>
       <div className='card-header text-right'>
         <Icons>
           <MdOutlineNoteAlt />

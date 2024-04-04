@@ -14,6 +14,19 @@ const NotesApp = () => {
   const handleDelNote = (id) => {
     setNotes(notes.filter((note) => note.id !== id))
   }
+
+  const cards = [
+    'card-info',
+    'card-danger',
+    'card-success',
+    'card-warning',
+    'card-primary',
+  ]
+
+  const randomBg = () => {
+    const random = Math.floor(Math.random() * cards.length)
+    return cards[random]
+  }
   return (
     <div className='container'>
       <Button
@@ -27,7 +40,12 @@ const NotesApp = () => {
         style={{ flexWrap: 'wrap', gap: 24 }}
       >
         {notes.map((note, index) => (
-          <Notes key={index} note={note} onClick={handleDelNote} />
+          <Notes
+            key={index}
+            note={note}
+            onClick={handleDelNote}
+            bg={randomBg}
+          />
         ))}
       </div>
     </div>
