@@ -15,9 +15,11 @@ import DialogBoxApp from './13-dialog-box-app/DialogBoxApp'
 import FilterContactApp from './14-filter-contact-app/FilterContactApp'
 import RegistrationForm from './15-registration-form-app/RegistrationForm'
 import NotesApp from './16-notes-app/NotesApp'
-import { NotesStyle } from './16-notes-app/NotesStyle'
+import { NotesStyle, Icons, DeleteIcon } from './16-notes-app/NotesStyle'
 
 export {
+  DeleteIcon,
+  Icons,
   NotesStyle,
   NotesApp,
   RegistrationForm,
