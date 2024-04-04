@@ -11,6 +11,9 @@ const NotesApp = () => {
     setNotes(newNotes)
   }
 
+  const handleDelNote = (id) => {
+    setNotes(notes.filter((note) => note.id !== id))
+  }
   return (
     <div className='container'>
       <Button
@@ -24,7 +27,7 @@ const NotesApp = () => {
         style={{ flexWrap: 'wrap' }}
       >
         {notes.map((note, index) => (
-          <Notes key={index} note={note} />
+          <Notes key={index} note={note} onClick={handleDelNote} />
         ))}
       </div>
     </div>
