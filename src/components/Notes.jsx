@@ -1,6 +1,6 @@
 import { DeleteIcon, Icons, NotesStyle } from '../Projects'
 import { MdOutlineNoteAlt, MdDeleteForever } from 'react-icons/md'
-const Notes = () => {
+const Notes = ({ note }) => {
   return (
     <NotesStyle className='card'>
       <div className='card-header text-right'>
