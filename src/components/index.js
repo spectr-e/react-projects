@@ -7,8 +7,10 @@ import Popup from './Popup'
 import { ProgressBar } from './ProgressBar'
 import Contact from './Contact'
 import Notes from './Notes'
+import NavItem from './NavItem'
 
 export {
+  NavItem,
   Notes,
   Contact,
   ProgressBar,
