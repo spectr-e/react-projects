@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/spectr-e/30--React-Projects/compare/v0.0.2...v0.0.3) (2024-04-05)
+
+
+### Features
+
+* **NavBarApp:** Add home + about + contact pages codebase ([1820128](https://github.com/spectr-e/30--React-Projects/commit/18201285c46a573a3c12f053fd2794119f7a837d))
+* **NavBar:** Initialize a codebase for project 17 - Responsive Navigation ([f4a13a9](https://github.com/spectr-e/30--React-Projects/commit/f4a13a9a048c792a21a0ec847b24d67d0b106c5b))
+
+
+### Bug Fixes
+
+* **NavBar:** Add structure for the links to be included ([35640e4](https://github.com/spectr-e/30--React-Projects/commit/35640e4840336dbb6a346ad3edad91d75ba3ead0))
+* **NavBarApp:** Add dynamic 'active' class to nav links ([80af17f](https://github.com/spectr-e/30--React-Projects/commit/80af17f21381f704a79726ba0ced06674f8e4cc1))
+* **NavBarApp:** Add page title on click respective links ([5225351](https://github.com/spectr-e/30--React-Projects/commit/522535103ca6f5b0276c435cf4a895a4965c187e))
+* **NavBarApp:** Add responsiveness to the navigation ([8f37ec5](https://github.com/spectr-e/30--React-Projects/commit/8f37ec59b2a48241730c082e01cfb041abba6798))
+
 ### [0.0.2](https://github.com/spectr-e/30--React-Projects/compare/v0.0.1...v0.0.2) (2024-04-04)
 
 
