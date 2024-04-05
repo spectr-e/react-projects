@@ -12,6 +12,7 @@ const Form = ({
   onKeyUp = null,
   classes,
   readOnly = false,
+  refer,
 }) => {
   const inputStyle = {
     border: '1px solid rgba(0,0,0,0.1)',
@@ -36,6 +37,7 @@ const Form = ({
         onKeyUp={onKeyUp}
         className={classes}
         readOnly={readOnly}
+        ref={refer}
       />
     </div>
   )
