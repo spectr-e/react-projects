@@ -19,6 +19,7 @@ import {
   RegistrationForm,
   NotesApp,
   NavBarApp,
+  TextAnimationApp,
 } from './Projects'
 
 function App() {
@@ -41,7 +42,8 @@ function App() {
         {/* <FilterContactApp /> */}
         {/* <RegistrationForm /> */}
         {/* <NotesApp /> */}
-        <NavBarApp />
+        {/* <NavBarApp /> */}
+        <TextAnimationApp />
       </div>
     </div>
   )
