@@ -49,34 +49,44 @@ const NavBarApp = () => {
       .querySelectorAll('.nav-link')
       .forEach((link) => link.classList.remove('active'))
     e.target.classList.add('active')
+    setPage(e.target.innerText)
   }
-  return (
-    <NavStyle
-      className={`navbar bg-primary text-light ${
-        showElement.navOpened && 'showNavBar'
-      }`}
-    >
-      <div className='navbar-logo'>
-        <a href='#' className='navbar-brand font-semibold'>
-          Kamauu
-        </a>
-        {/* Open & Close Icons */}
-        {showElement.hamburgerIcon && <AiOutlineMenu onClick={openNav} />}
-        {showElement.closeIcon && <AiOutlineClose onClick={closeNav} />}
-      </div>
 
-      <div className='navbar-collapse'>
-        {showElement.mobileNav && (
-          <ul
-            className={`navbar-items ${showElement.navOpened && 'showNavBar'}`}
-          >
-            <NavItem text={'Home'} active='active' onClick={handleActive} />
-            <NavItem text={'About'} onClick={handleActive} />
-            <NavItem text={'Contact'} onClick={handleActive} />
-          </ul>
-        )}
-      </div>
-    </NavStyle>
+  const [page, setPage] = useState('')
+  return (
+    <>
+      <NavStyle
+        className={`navbar bg-primary text-light ${
+          showElement.navOpened && 'showNavBar'
+        }`}
+      >
+        <div className='navbar-logo'>
+          <a href='#' className='navbar-brand font-semibold'>
+            Kamauu
+          </a>
+          {/* Open & Close Icons */}
+          {showElement.hamburgerIcon && <AiOutlineMenu onClick={openNav} />}
+          {showElement.closeIcon && <AiOutlineClose onClick={closeNav} />}
+        </div>
+
+        <div className='navbar-collapse'>
+          {showElement.mobileNav && (
+            <ul
+              className={`navbar-items ${
+                showElement.navOpened && 'showNavBar'
+              }`}
+            >
+              <NavItem text={'Home'} active='active' onClick={handleActive} />
+              <NavItem text={'About'} onClick={handleActive} />
+              <NavItem text={'Contact'} onClick={handleActive} />
+            </ul>
+          )}
+        </div>
+      </NavStyle>
+      <h1 className='title text-center text-primary'>
+        {!page ? 'Welcome' : page}
+      </h1>
+    </>
   )
 }
 
