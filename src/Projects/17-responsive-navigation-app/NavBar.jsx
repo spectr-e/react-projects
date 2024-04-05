@@ -3,6 +3,9 @@ import { NavItem } from '../../components'
 import { NavStyle } from './NavStyle'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
+// IMPORT PAGES
+import { About, Contacts, Home } from '../../pages'
+
 const NavBarApp = () => {
   const [showElement, setShowElement] = useState({
     mobileNav: true,
@@ -49,10 +52,32 @@ const NavBarApp = () => {
       .querySelectorAll('.nav-link')
       .forEach((link) => link.classList.remove('active'))
     e.target.classList.add('active')
-    setPage(e.target.innerText)
   }
 
-  const [page, setPage] = useState('')
+  // UPDATE: ADDING PAGE NAVIGATION
+  const [pages, setPages] = useState('')
+
+  const navigate = (e) => {
+    document
+      .querySelectorAll('.nav-link')
+      .forEach((link) => link.classList.remove('active'))
+    e.target.classList.add('active')
+
+    const navItem = e.target.innerText
+    switch (navItem) {
+      case 'Home':
+        setPages(<Home page={'Home'} />)
+        break
+      case 'About':
+        setPages(<About page={'About'} />)
+        break
+      case 'Contact':
+        setPages(<Contacts page={'Contact'} />)
+        break
+      default:
+        break
+    }
+  }
   return (
     <>
       <NavStyle
@@ -76,16 +101,14 @@ const NavBarApp = () => {
                 showElement.navOpened && 'showNavBar'
               }`}
             >
-              <NavItem text={'Home'} active='active' onClick={handleActive} />
-              <NavItem text={'About'} onClick={handleActive} />
-              <NavItem text={'Contact'} onClick={handleActive} />
+              <NavItem text={'Home'} active='active' onClick={navigate} />
+              <NavItem text={'About'} onClick={navigate} />
+              <NavItem text={'Contact'} onClick={navigate} />
             </ul>
           )}
         </div>
       </NavStyle>
-      <h1 className='title text-center text-primary'>
-        {!page ? 'Welcome' : page}
-      </h1>
+      <div className='container px-2 outlet'>{pages}</div>
     </>
   )
 }

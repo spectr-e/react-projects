@@ -1,5 +1,5 @@
 import About from './About'
-import Contact from './Contact'
+import Contacts from './Contacts.jsx'
 import Home from './Home.jsx'
 
-export { Home, About, Contact }
+export { Home, About, Contacts }

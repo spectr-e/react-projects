@@ -1,7 +1,9 @@
-const Home = () => {
+import { Title } from '../components'
+
+const Home = ({ page }) => {
   return (
     <>
-      <Title title={'Home'} classes={'title text-center text-primary'} />
+      <Title title={page} classes={'title text-center text-primary'} />
 
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, vero!
