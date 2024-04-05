@@ -44,6 +44,12 @@ const NavBarApp = () => {
     })
   }
 
+  const handleActive = (e) => {
+    document
+      .querySelectorAll('.nav-link')
+      .forEach((link) => link.classList.remove('active'))
+    e.target.classList.add('active')
+  }
   return (
     <NavStyle
       className={`navbar bg-primary text-light ${
@@ -64,9 +70,9 @@ const NavBarApp = () => {
           <ul
             className={`navbar-items ${showElement.navOpened && 'showNavBar'}`}
           >
-            <NavItem text={'Home'} active='active' />
-            <NavItem text={'About'} />
-            <NavItem text={'Contact'} />
+            <NavItem text={'Home'} active='active' onClick={handleActive} />
+            <NavItem text={'About'} onClick={handleActive} />
+            <NavItem text={'Contact'} onClick={handleActive} />
           </ul>
         )}
       </div>
