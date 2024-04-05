@@ -8,8 +8,9 @@ import { ProgressBar } from './ProgressBar'
 import Contact from './Contact'
 import Notes from './Notes'
 import NavItem from './NavItem'
-
+import Form from './Form'
 export {
+  Form,
   NavItem,
   Notes,
   Contact,
