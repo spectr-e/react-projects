@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { Button, Form, Title } from '../../components'
 
 const TextAnimationApp = () => {
-  const [value, setValue] = useState('')
-  const handleChange = (e) => setValue(e.target.value)
+  const [inputValue, setInputValue] = useState('')
+  const handleInputChange = (e) => setInputValue(e.target.value)
 
   return (
     <div className='container text-center'>
@@ -16,8 +16,8 @@ const TextAnimationApp = () => {
       >
         <Form
           placeholderText={'Type in your text to be animated'}
-          values={value}
-          onChange={handleChange}
+          values={inputValue}
+          onChange={handleInputChange}
         />
         <Button text='Clear' classes={'btn-large btn-danger'} />
       </form>
