@@ -6,6 +6,12 @@ const Form = ({
   inputType = 'text',
   placeholderText,
   inputName,
+  onInput = null,
+  onChange = null,
+  values = '',
+  onKeyUp = null,
+  classes,
+  readOnly = false,
 }) => {
   const inputStyle = {
     border: '1px solid rgba(0,0,0,0.1)',
@@ -24,6 +30,12 @@ const Form = ({
         placeholder={placeholderText}
         name={inputName}
         style={inputStyle}
+        value={values}
+        onChange={onChange}
+        onInput={onInput}
+        onKeyUp={onKeyUp}
+        className={classes}
+        readOnly={readOnly}
       />
     </div>
   )

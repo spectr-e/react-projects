@@ -25,7 +25,7 @@ import {
 function App() {
   return (
     <div>
-      <div className=''>
+      <div>
         {/* <EsignatureApp /> */}
         {/* <RandomizeColorsApp /> */}
         {/* <LikeMyPhotoApp /> */}
