@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { Button, Form, Title } from '../../components'
+import AnimatedText from 'react-animated-text-content'
 
 const TextAnimationApp = () => {
   const [inputValue, setInputValue] = useState('')
+  const [animText, setAnimText] = useState('')
   const handleInputChange = (e) => setInputValue(e.target.value)
-
+  const handleClear = () => {
+    setAnimText(inputValue)
+    setInputValue('')
+  }
   return (
     <div className='container text-center'>
       <Title title={'Text Animation App'} />
@@ -19,8 +24,13 @@ const TextAnimationApp = () => {
           values={inputValue}
           onChange={handleInputChange}
         />
-        <Button text='Clear' classes={'btn-large btn-danger'} />
+        <Button
+          text='Clear'
+          classes={'btn-large btn-danger'}
+          handleClick={handleClear}
+        />
       </form>
+      {animText && <AnimatedText className='subtitle'>{animText}</AnimatedText>}
     </div>
   )
 }
