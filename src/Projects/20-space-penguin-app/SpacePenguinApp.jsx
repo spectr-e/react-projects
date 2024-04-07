@@ -1,8 +1,12 @@
 import './Ship.css'
-import { Title } from '../../components'
+import { Button, Title } from '../../components'
 
 const SpacePenguinApp = () => {
-  return <div className='space'></div>
+  return (
+    <div className='space'>
+      <Button text='Launch' classes={'btn-danger'} />
+    </div>
+  )
 }
 
 export default SpacePenguinApp
