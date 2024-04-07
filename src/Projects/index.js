@@ -19,8 +19,10 @@ import { NotesStyle, Icons, DeleteIcon } from './16-notes-app/NotesStyle'
 import NavBarApp from './17-responsive-navigation-app/NavBar'
 import TextAnimationApp from './18-text-animation-app/TextAnimationApp'
 import CompoundInterestApp from './19-compound-interest-calc-app/CompoundInterestCalcApp'
+import SpacePenguinApp from './20-space-penguin-app/SpacePenguinApp'
 
 export {
+  SpacePenguinApp,
   CompoundInterestApp,
   TextAnimationApp,
   NavBarApp,

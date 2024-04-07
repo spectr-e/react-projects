@@ -21,6 +21,7 @@ import {
   NavBarApp,
   TextAnimationApp,
   CompoundInterestApp,
+  SpacePenguinApp,
 } from './Projects'
 
 function App() {
@@ -45,7 +46,8 @@ function App() {
         {/* <NotesApp /> */}
         {/* <NavBarApp /> */}
         {/* <TextAnimationApp /> */}
-        <CompoundInterestApp />
+        {/* <CompoundInterestApp /> */}
+        <SpacePenguinApp />
       </div>
     </div>
   )
