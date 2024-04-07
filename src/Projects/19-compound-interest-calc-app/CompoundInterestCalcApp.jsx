@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Form, Title } from '../../components'
+import { Form, InterestCalc, Title } from '../../components'
 
 const CompoundInterestApp = () => {
   const principalInputRef = useRef(null)
@@ -83,7 +83,14 @@ const CompoundInterestApp = () => {
           />
         </div>
 
-        <div className='card-footer text-right font-lg'>KES 0.00</div>
+        <div className='card-footer text-right font-lg'>
+          <InterestCalc
+            principalValue={formData.principal}
+            monthly={formData.monthly}
+            interestRate={formData.interest}
+            period={formData.period}
+          />
+        </div>
       </div>
     </div>
   )
