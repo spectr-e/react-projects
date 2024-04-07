@@ -1,11 +1,9 @@
-import { Ship } from '../assets'
-
-const SpaceShip = ({ scale, start }) => {
+const SpaceShip = ({ scale, start, ship }) => {
   const animation = start
   return (
     <>
       <img
-        src={Ship}
+        src={ship}
         alt='space ship'
         style={{ position: 'absolute', bottom: 50, zIndex: 1, width: scale }}
         className={animation}
