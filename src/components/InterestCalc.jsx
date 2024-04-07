@@ -1,5 +1,5 @@
 const InterestCalc = ({ principalValue, interestRate, period, monthly }) => {
-  // A = P (1 + r/n ) ^ nt
+  // A = P (1 + r/n ) ^ nt => WITHOUT A MONTHLY CONTRIBUTION
   // A - future value of investment
   // P - principal value
   // r - interest rate
@@ -13,8 +13,18 @@ const InterestCalc = ({ principalValue, interestRate, period, monthly }) => {
     t: period,
     PMT: monthly,
   }
-
-  return <div>KES {(A.P * Math.pow(1 + A.r / A.n, A.n * A.t)).toFixed(2)}</div>
+  // PMT x {[(1 + r/n)(nt) - 1] / (r/n)} => WITH A MONTHLY CONTRIBUTION
+  return (
+    <div>
+      KES{' '}
+      {!A.PMT
+        ? (A.P * Math.pow(1 + A.r / A.n, A.n * A.t)).toFixed(2)
+        : (
+            A.P * Math.pow(1 + A.r / A.n, A.n * A.t) +
+            (A.PMT * (Math.pow(1 + A.r / A.n, A.n * A.t) - 1)) / (A.r / A.n)
+          ).toFixed(2)}
+    </div>
+  )
 }
 
 export default InterestCalc
