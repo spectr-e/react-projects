@@ -4,7 +4,7 @@ import { Earth, Ship, TheMoon } from '../../assets'
 import { useState } from 'react'
 
 const SpacePenguinApp = () => {
-  const [shipAct, setShipAct] = useState()
+  const [shipAct, setShipAct] = useState('')
   const [transformScale, setTransformScale] = useState(200)
 
   const startShip = () => {
@@ -19,7 +19,7 @@ const SpacePenguinApp = () => {
     <div className='space'>
       <Button text='Launch' classes={'btn-danger'} handleClick={startShip} />
       <section className='env'>
-        <SpaceShip ship={Ship} scale={200} />
+        <SpaceShip ship={Ship} scale={200} start={shipAct} />
         <Moon moon={TheMoon} />
         <Planet planet={Earth} />
       </section>
