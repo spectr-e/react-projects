@@ -4,22 +4,25 @@ import { Earth, Ship, TheMoon } from '../../assets'
 import { useState } from 'react'
 
 const SpacePenguinApp = () => {
-  const [shipAct, setShipAct] = useState('')
-  const [transformScale, setTransformScale] = useState(200)
-
+  const [shipProps, setShipProps] = useState({
+    action: '',
+    scale: 200,
+  })
   const startShip = () => {
-    setShipAct('fly')
-    setTransformScale(50)
+    setShipProps({ action: 'fly', scale: 50 })
   }
   const landShip = () => {
-    setShipAct('land')
-    setTransformScale(200)
+    setShipProps({ action: 'land', scale: 200 })
   }
   return (
     <div className='space'>
       <Button text='Launch' classes={'btn-danger'} handleClick={startShip} />
       <section className='env'>
-        <SpaceShip ship={Ship} scale={200} start={shipAct} />
+        <SpaceShip
+          ship={Ship}
+          scale={shipProps.scale}
+          start={shipProps.action}
+        />
         <Moon moon={TheMoon} />
         <Planet planet={Earth} />
       </section>
