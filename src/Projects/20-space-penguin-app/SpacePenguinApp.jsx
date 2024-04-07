@@ -1,6 +1,6 @@
 import './Ship.css'
 import { Button, Moon, Planet, SpaceShip, Title } from '../../components'
-import { Ship } from '../../assets'
+import { Earth, Ship } from '../../assets'
 
 const SpacePenguinApp = () => {
   return (
@@ -9,7 +9,7 @@ const SpacePenguinApp = () => {
       <section className='env'>
         <SpaceShip ship={Ship} scale={200} />
         <Moon />
-        <Planet />
+        <Planet planet={Earth} />
       </section>
       <Button text='Land' classes={'btn-primary'} />
     </div>
