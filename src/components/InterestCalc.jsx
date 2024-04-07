@@ -6,22 +6,26 @@ const InterestCalc = ({ principalValue, interestRate, period, monthly }) => {
   // n - no. of compounding times in a year
   // t - no. of investment years
 
-  const A = {
+  const values = {
     P: principalValue,
     r: interestRate / 100,
     n: 12,
     t: period,
-    PMT: monthly,
+    monthly: monthly,
   }
-  // PMT x {[(1 + r/n)(nt) - 1] / (r/n)} => WITH A MONTHLY CONTRIBUTION
+  const withoutMonthly =
+    values.P * Math.pow(1 + values.r / values.n, values.n * values.t)
+  // monthly x {[(1 + r/n)(nt) - 1] / (r/n)} => WITH A MONTHLY CONTRIBUTION
   return (
     <div>
       KES{' '}
-      {!A.PMT
-        ? (A.P * Math.pow(1 + A.r / A.n, A.n * A.t)).toFixed(2)
+      {!values.monthly
+        ? withoutMonthly.toFixed(2)
         : (
-            A.P * Math.pow(1 + A.r / A.n, A.n * A.t) +
-            (A.PMT * (Math.pow(1 + A.r / A.n, A.n * A.t) - 1)) / (A.r / A.n)
+            withoutMonthly +
+            (values.monthly *
+              (Math.pow(1 + values.r / values.n, values.n * values.t) - 1)) /
+              (values.r / values.n)
           ).toFixed(2)}
     </div>
   )
