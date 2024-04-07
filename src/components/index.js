@@ -9,8 +9,10 @@ import Contact from './Contact'
 import Notes from './Notes'
 import NavItem from './NavItem'
 import Form from './Form'
+import InterestCalc from './InterestCalc'
 export {
   Form,
+  InterestCalc,
   NavItem,
   Notes,
   Contact,

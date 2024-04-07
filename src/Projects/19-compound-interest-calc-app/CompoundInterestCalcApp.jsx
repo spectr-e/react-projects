@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Form, Title } from '../../components'
 
-const CompoundInterestCalcApp = () => {
+const CompoundInterestApp = () => {
   const principalInputRef = useRef(null)
   useEffect(() => {
     principalInputRef.current.focus()
@@ -89,4 +89,4 @@ const CompoundInterestCalcApp = () => {
   )
 }
 
-export default CompoundInterestCalcApp
+export default CompoundInterestApp
