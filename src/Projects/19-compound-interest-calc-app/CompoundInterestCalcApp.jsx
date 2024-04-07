@@ -1,9 +1,14 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Form, Title } from '../../components'
 
 const CompoundInterestCalcApp = () => {
+  const [formData, setFormData] = useState({
+    principal: '',
+    monthly: '',
+    interest: '',
+    period: '',
+  })
   const principalInputRef = useRef(null)
-
   useEffect(() => {
     principalInputRef.current.focus()
   }, [])
@@ -24,7 +29,7 @@ const CompoundInterestCalcApp = () => {
             labelText={'Principal Amount (KES)'}
             labelFor={'principal'}
             inputType='number'
-            values=''
+            values={formData.principal}
             classes={'mb-1'}
             refer={principalInputRef}
           />
@@ -33,7 +38,7 @@ const CompoundInterestCalcApp = () => {
             labelFor={'monthly'}
             labelText={'Monthly Contribution (KES)'}
             inputType='number'
-            values=''
+            values={formData.monthly}
             classes={'mb-1'}
           />
           <Form
@@ -41,7 +46,7 @@ const CompoundInterestCalcApp = () => {
             labelFor={'interest'}
             labelText={'Interest Rate (%)'}
             inputType='number'
-            values=''
+            values={formData.interest}
             classes={'mb-1'}
           />
           <Form
@@ -49,7 +54,7 @@ const CompoundInterestCalcApp = () => {
             labelFor={'period'}
             labelText={'Period (yrs)'}
             inputType='number'
-            values=''
+            values={formData.period}
             classes={'mb-1'}
           />
         </div>
