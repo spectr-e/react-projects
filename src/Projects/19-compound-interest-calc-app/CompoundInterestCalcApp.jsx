@@ -2,16 +2,36 @@ import { useEffect, useRef, useState } from 'react'
 import { Form, Title } from '../../components'
 
 const CompoundInterestCalcApp = () => {
+  const principalInputRef = useRef(null)
+  useEffect(() => {
+    principalInputRef.current.focus()
+  }, [])
+
   const [formData, setFormData] = useState({
     principal: '',
     monthly: '',
     interest: '',
     period: '',
   })
-  const principalInputRef = useRef(null)
-  useEffect(() => {
-    principalInputRef.current.focus()
-  }, [])
+
+  const handleInputChange = (e) => {
+    switch (e.target.name) {
+      case 'principal':
+        setFormData({ ...formData, principal: e.target.value })
+        break
+      case 'monthly':
+        setFormData({ ...formData, monthly: e.target.value })
+        break
+      case 'interest':
+        setFormData({ ...formData, interest: e.target.value })
+        break
+      case 'period':
+        setFormData({ ...formData, period: e.target.value })
+        break
+      default:
+        break
+    }
+  }
   return (
     <div className='container'>
       <Title
@@ -30,6 +50,7 @@ const CompoundInterestCalcApp = () => {
             labelFor={'principal'}
             inputType='number'
             values={formData.principal}
+            onChange={handleInputChange}
             classes={'mb-1'}
             refer={principalInputRef}
           />
@@ -39,6 +60,7 @@ const CompoundInterestCalcApp = () => {
             labelText={'Monthly Contribution (KES)'}
             inputType='number'
             values={formData.monthly}
+            onChange={handleInputChange}
             classes={'mb-1'}
           />
           <Form
@@ -47,6 +69,7 @@ const CompoundInterestCalcApp = () => {
             labelText={'Interest Rate (%)'}
             inputType='number'
             values={formData.interest}
+            onChange={handleInputChange}
             classes={'mb-1'}
           />
           <Form
@@ -55,6 +78,7 @@ const CompoundInterestCalcApp = () => {
             labelText={'Period (yrs)'}
             inputType='number'
             values={formData.period}
+            onChange={handleInputChange}
             classes={'mb-1'}
           />
         </div>
