@@ -1,11 +1,8 @@
+import './Ship.css'
 import { Title } from '../../components'
 
 const SpacePenguinApp = () => {
-  return (
-    <div className='container text-center'>
-      <Title title={'Space Penguin App'} />
-    </div>
-  )
+  return <div className='space'></div>
 }
 
 export default SpacePenguinApp
