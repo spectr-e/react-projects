@@ -10,7 +10,14 @@ import Notes from './Notes'
 import NavItem from './NavItem'
 import Form from './Form'
 import InterestCalc from './InterestCalc'
+import SpaceShip from './SpaceShip'
+import Moon from './Moon'
+import Planet from './Planet'
+
 export {
+  SpaceShip,
+  Moon,
+  Planet,
   Form,
   InterestCalc,
   NavItem,

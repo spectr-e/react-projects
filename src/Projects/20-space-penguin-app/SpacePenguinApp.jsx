@@ -1,5 +1,11 @@
+import { Title } from '../../components'
+
 const SpacePenguinApp = () => {
-  return <div>SpacePenguinApp</div>
+  return (
+    <div className='container text-center'>
+      <Title title={'Space Penguin App'} />
+    </div>
+  )
 }
 
 export default SpacePenguinApp
