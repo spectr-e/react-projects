@@ -21,6 +21,9 @@ const SpacePenguinApp = () => {
   useEffect(() => {
     if (shipProps.action === 'land') {
       setShipType(Penguin)
+      setTimeout(() => {
+        setShipType(Ship)
+      }, 5000)
     }
     if (shipProps.action === 'fly') {
       setShipType(Ship)
