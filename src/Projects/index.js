@@ -18,8 +18,10 @@ import NotesApp from './16-notes-app/NotesApp'
 import { NotesStyle, Icons, DeleteIcon } from './16-notes-app/NotesStyle'
 import NavBarApp from './17-responsive-navigation-app/NavBar'
 import TextAnimationApp from './18-text-animation-app/TextAnimationApp'
+import CompoundInterestCalcApp from './19-compound-interest-calc-app/CompoundInterestCalcApp'
 
 export {
+  CompoundInterestCalcApp,
   TextAnimationApp,
   NavBarApp,
   DeleteIcon,
