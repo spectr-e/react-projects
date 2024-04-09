@@ -138,3 +138,8 @@ You will implement the project using the hooks; useEffect, useState, useRef and 
 You will create a phone book application where people can be sorted using an alphabetical order or not by clicking on a button. A user can also search for a person in the phone book using the search field up top. A user can also be able to call the person directly on his mobile device.
 
 You will implement the project using the hooks; useEffect, useState, useRef and you will react icons. You will also generate random avatars for the people in the contact list.
+
+## Project 25: Expenses Calculator App
+
+You will create an app that a user can take note of all of their expenses, set a budget then automatically calculate how much savings they will have at the end of the day. All of the expenses once keyed in will be stored in local storage.
+A user can also delete or edit the expense already inputted and the balance will be recalculated automatically. Also, have a button where when clicked, it can clear all the expenses in local storage.
