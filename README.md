@@ -159,3 +159,7 @@ You will use the context API which will regulate which currency will be displaye
 ## Project 28: Authentication App
 
 You will create a frontend authentication where it will only accept user's submission when one enters the right credentials. Now this will be treated with the Context API which will maintain our user credential database.
+
+## Project 29: Speech Synthesizer App
+
+You will create a speech synthesizer app using React and the Speech Synthesizer API. This is extremely helpful on sites for those who cannot read text. It will also highlight the items it just read and user can change the speed in which items are read.
