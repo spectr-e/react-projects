@@ -131,3 +131,10 @@ You can also delete the task where an alert will be shown to confirm deletion of
 ## Project 23: Animated Login Form
 
 You will create an animated login form where upon the login process, in case you attempt to submit an empty form, a red border will appear on the profile picture. Upon successful submission, an animation will be shown.
+You will implement the project using the hooks; useEffect, useState, useRef and you will use animations within style components.
+
+## Project 24: Phone Book App
+
+You will create a phone book application where people can be sorted using an alphabetical order or not by clicking on a button. A user can also search for a person in the phone book using the search field up top. A user can also be able to call the person directly on his mobile device.
+
+You will implement the project using the hooks; useEffect, useState, useRef and you will react icons. You will also generate random avatars for the people in the contact list.
