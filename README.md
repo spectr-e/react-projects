@@ -143,3 +143,9 @@ You will implement the project using the hooks; useEffect, useState, useRef and 
 
 You will create an app that a user can take note of all of their expenses, set a budget then automatically calculate how much savings they will have at the end of the day. All of the expenses once keyed in will be stored in local storage.
 A user can also delete or edit the expense already inputted and the balance will be recalculated automatically. Also, have a button where when clicked, it can clear all the expenses in local storage.
+
+## Project 26: Mortgage Calculator App
+
+You will create an app that will sort users who are planning to buy a home. It will take in the value of the home user wants to buy and the down payment they are going to pay. Then it will calculate the loan amount they should take out automatically.
+
+A user will add the interest rate and the period they will pay the mortgage for. Then the app will calculate the monthly payment amount.
