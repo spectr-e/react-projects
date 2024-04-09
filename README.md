@@ -128,7 +128,6 @@ You will create a game in that when the launch button is clicked, the rocket fro
 You will create a task tracker where you can add multiple tasks and their respective dates. You can hover over the specific tasks and click on them to signify that they are completed.
 You can also delete the task where an alert will be shown to confirm deletion of the task.
 
-## Project 22: Card Game App
+## Project 23: Animated Login Form
 
-You will create a game UI for a card game. When you click on the start, it takes you to the card game. You will create each of the cards, mirror them,
-add attacks, defenses, morale unit, count to them also different types of units.
+You will create an animated login form where upon the login process, in case you attempt to submit an empty form, a red border will appear on the profile picture. Upon successful submission, an animation will be shown.
