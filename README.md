@@ -149,3 +149,9 @@ A user can also delete or edit the expense already inputted and the balance will
 You will create an app that will sort users who are planning to buy a home. It will take in the value of the home user wants to buy and the down payment they are going to pay. Then it will calculate the loan amount they should take out automatically.
 
 A user will add the interest rate and the period they will pay the mortgage for. Then the app will calculate the monthly payment amount.
+
+## Project 27: Course Store App
+
+You will create a course store application which contains a couple of course cards that you can buy any of them. You will also create a functionality where a user can display the price of a course in different currencies. You will set a personal conversion rate and not really use an update one.
+
+You will use the context API which will regulate which currency will be displayed as well as the type of card.
