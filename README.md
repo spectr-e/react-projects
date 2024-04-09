@@ -122,3 +122,8 @@ You will create an application that will calculate the interest rate of whatever
 ## Project 20: Space Penguin App
 
 You will create a game in that when the launch button is clicked, the rocket from Earth will launch into space to the moon and it will slowly disappear. When the land button is clicked, instead of a rocket landing from the moon, a penguin will be landed instead on Earth.
+
+## Project 21: Task Tracker App
+
+You will create a task tracker where you can add multiple tasks and their respective dates. You can hover over the specific tasks and click on them to signify that they are completed.
+You can also delete the task where an alert will be shown to confirm deletion of the task.
