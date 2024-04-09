@@ -127,3 +127,8 @@ You will create a game in that when the launch button is clicked, the rocket fro
 
 You will create a task tracker where you can add multiple tasks and their respective dates. You can hover over the specific tasks and click on them to signify that they are completed.
 You can also delete the task where an alert will be shown to confirm deletion of the task.
+
+## Project 22: Card Game App
+
+You will create a game UI for a card game. When you click on the start, it takes you to the card game. You will create each of the cards, mirror them,
+add attacks, defenses, morale unit, count to them also different types of units.
