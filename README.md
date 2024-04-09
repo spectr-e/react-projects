@@ -155,3 +155,7 @@ A user will add the interest rate and the period they will pay the mortgage for.
 You will create a course store application which contains a couple of course cards that you can buy any of them. You will also create a functionality where a user can display the price of a course in different currencies. You will set a personal conversion rate and not really use an update one.
 
 You will use the context API which will regulate which currency will be displayed as well as the type of card.
+
+## Project 28: Authentication App
+
+You will create a frontend authentication where it will only accept user's submission when one enters the right credentials. Now this will be treated with the Context API which will maintain our user credential database.
