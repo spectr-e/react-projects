@@ -163,3 +163,8 @@ You will create a frontend authentication where it will only accept user's submi
 ## Project 29: Speech Synthesizer App
 
 You will create a speech synthesizer app using React and the Speech Synthesizer API. This is extremely helpful on sites for those who cannot read text. It will also highlight the items it just read and user can change the speed in which items are read.
+
+## Project 30: Lazy Loading App
+
+You will learn how to implemement lazy loads into a larger web application where one needs to load a bunch of data which will well try to push the entire data down the pipe and bring bottlenecks when trying to load the application.
+Data will be loaded on scrolling down the page eventually removing strain from the network and making the application faster.
