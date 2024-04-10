@@ -1,10 +1,12 @@
+import { RiDeleteBin6Fill } from 'react-icons/ri'
+import { Button } from '../../components'
 import { DisplayTaskStyle } from './TableStyle'
 
-const DisplayTask = ({ type, date }) => {
+const DisplayTask = ({ type, date, taskClick }) => {
   return (
-    <DisplayTaskStyle>
-      <div className=''>
-        <h3 className=''>{type}</h3>
+    <DisplayTaskStyle onClick={taskClick}>
+      <div>
+        <h3>{type}</h3>
         <small className='text-danger'>{date}</small>
       </div>
     </DisplayTaskStyle>

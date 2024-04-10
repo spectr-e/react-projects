@@ -32,6 +32,10 @@ const TaskTrackerApp = () => {
     console.log(taskList)
   }
 
+  const handleCompleted = (e) => {
+    e.target.classList.toggle('completed')
+  }
+
   return (
     <div className='container'>
       <Title title={'Task Tracker App'} classes={'title text-center'} />
@@ -52,7 +56,13 @@ const TaskTrackerApp = () => {
           {taskList.map((task, i) => {
             console.log(task)
             return task.date && task.type ? (
-              <DisplayTask key={i} date={task.date} type={task.type} />
+              <DisplayTask
+                key={i}
+                date={task.date}
+                type={task.type}
+                deleteNote={handleDelete}
+                taskClick={handleCompleted}
+              />
             ) : null
           })}
         </ul>
