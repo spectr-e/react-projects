@@ -23,7 +23,11 @@ const TaskTrackerApp = () => {
     }
   }
 
-  const tasks = [{ date: '', type: '' }]
+  const handleAddTask = (e) => {
+    setTaskList([...taskList, { date: newTask.date, type: newTask.type }])
+    console.log(taskList)
+  }
+  let tasks = [{ date: '', type: '' }]
   const [taskList, setTaskList] = useState(tasks)
   return (
     <div className='container'>
@@ -34,11 +38,19 @@ const TaskTrackerApp = () => {
           <li>Task</li>
         </ul>
 
-        <Tasks date={newTask.date} setData={handleChange} type={newTask.type} />
+        <Tasks
+          date={newTask.date}
+          setData={handleChange}
+          type={newTask.type}
+          buttonClick={handleAddTask}
+        />
 
         <ul className='table-row'>
           {taskList.map((task, i) => {
-            !task.date && task.type ? <NewTask /> : null
+            console.log(task)
+            return task.date && task.type ? (
+              <NewTask key={i} date={task.date} type={task.type} />
+            ) : null
           })}
         </ul>
       </TableStyle>
