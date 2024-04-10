@@ -36,6 +36,11 @@ const TaskTrackerApp = () => {
     e.target.classList.toggle('completed')
   }
 
+  const handleDelete = (e) => {
+    window.confirm('Are you sure you want to delete?') &&
+      e.target.parentElement.remove()
+  }
+
   return (
     <div className='container'>
       <Title title={'Task Tracker App'} classes={'title text-center'} />
@@ -62,6 +67,7 @@ const TaskTrackerApp = () => {
                 type={task.type}
                 deleteNote={handleDelete}
                 taskClick={handleCompleted}
+                deleteNote={handleDelete}
               />
             ) : null
           })}
