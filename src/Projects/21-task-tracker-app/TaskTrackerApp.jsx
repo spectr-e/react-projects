@@ -1,7 +1,26 @@
+import { useState } from 'react'
 import { Tasks, Title } from '../../components'
 import { TableStyle } from './TableStyle'
 
 const TaskTrackerApp = () => {
+  const [newTask, setNewTask] = useState({
+    date: '',
+    type: '',
+    completed: '',
+  })
+
+  const handleChange = (e) => {
+    switch (e.target.name) {
+      case 'inputDate':
+        setNewTask({ ...newTask, date: e.target.value })
+        break
+      case 'inputType':
+        setNewTask({ ...newTask, type: e.target.value })
+        break
+      default:
+        break
+    }
+  }
   return (
     <div className='container'>
       <Title title={'Task Tracker App'} classes={'title text-center'} />
@@ -10,7 +29,9 @@ const TaskTrackerApp = () => {
           <li>Date</li>
           <li>Task</li>
         </ul>
-        <Tasks />
+
+        <Tasks date={newTask.date} setData={handleChange} type={newTask.type} />
+
         <ul className='table-row'>
           <li className='completed'>Task</li>
           <li>Task</li>
