@@ -22,6 +22,9 @@ const TaskTrackerApp = () => {
         break
     }
   }
+
+  const tasks = [{ date: '', type: '' }]
+  const [taskList, setTaskList] = useState(tasks)
   return (
     <div className='container'>
       <Title title={'Task Tracker App'} classes={'title text-center'} />
@@ -34,7 +37,9 @@ const TaskTrackerApp = () => {
         <Tasks date={newTask.date} setData={handleChange} type={newTask.type} />
 
         <ul className='table-row'>
-          <NewTask />
+          {taskList.map((task, i) => {
+            !task.date && task.type ? <NewTask /> : null
+          })}
         </ul>
       </TableStyle>
     </div>
