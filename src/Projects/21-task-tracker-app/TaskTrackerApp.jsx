@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Tasks, Title } from '../../components'
 import { TableStyle } from './TableStyle'
+import NewTask from './NewTask'
 
 const TaskTrackerApp = () => {
   const [newTask, setNewTask] = useState({
@@ -33,10 +34,7 @@ const TaskTrackerApp = () => {
         <Tasks date={newTask.date} setData={handleChange} type={newTask.type} />
 
         <ul className='table-row'>
-          <li className='completed'>Task</li>
-          <li>Task</li>
-          <li>Task</li>
-          <li>Task</li>
+          <NewTask />
         </ul>
       </TableStyle>
     </div>
