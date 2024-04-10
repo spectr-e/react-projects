@@ -1,4 +1,4 @@
-import './Ship.css'
+// import './Ship.css'
 import { Button, Moon, Planet, SpaceShip, Title } from '../../components'
 import { Earth, Penguin, Ship, TheMoon } from '../../assets'
 import { useEffect, useState } from 'react'
