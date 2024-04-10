@@ -13,8 +13,9 @@ import InterestCalc from './InterestCalc'
 import SpaceShip from './SpaceShip'
 import Moon from './Moon'
 import Planet from './Planet'
-
+import Tasks from './Tasks'
 export {
+  Tasks,
   SpaceShip,
   Moon,
   Planet,

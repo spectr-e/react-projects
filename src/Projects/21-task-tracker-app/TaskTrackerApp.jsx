@@ -1,16 +1,16 @@
-import { Title } from '../../components'
+import { Tasks, Title } from '../../components'
 import { TableStyle } from './TableStyle'
 
 const TaskTrackerApp = () => {
   return (
     <div className='container'>
-      <Title title={'Task Tracker App'} />
+      <Title title={'Task Tracker App'} classes={'title text-center'} />
       <TableStyle>
         <ul className='table-head'>
           <li>Date</li>
           <li>Task</li>
         </ul>
-        {/* <Tasks /> */}
+        <Tasks />
         <ul className='table-row'>
           <li className='completed'>Task</li>
           <li>Task</li>
