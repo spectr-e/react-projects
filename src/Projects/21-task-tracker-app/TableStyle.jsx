@@ -55,7 +55,7 @@ export const TableStyle = styled.div`
   }
 `
 
-export const NewTaskStyle = styled.li`
+export const DisplayTaskStyle = styled.li`
   display: flex;
   justify-content: space-between;
 `

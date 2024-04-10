@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Tasks, Title } from '../../components'
+import { AddTaskForm, Title } from '../../components'
 import { TableStyle } from './TableStyle'
-import NewTask from './NewTask'
+import DisplayTask from './DisplayTask'
 
 const TaskTrackerApp = () => {
   const [newTask, setNewTask] = useState({
@@ -9,6 +9,10 @@ const TaskTrackerApp = () => {
     type: '',
     completed: '',
   })
+
+  let tasks = [{ date: '', type: '' }]
+
+  const [taskList, setTaskList] = useState(tasks)
 
   const handleChange = (e) => {
     switch (e.target.name) {
@@ -27,8 +31,7 @@ const TaskTrackerApp = () => {
     setTaskList([...taskList, { date: newTask.date, type: newTask.type }])
     console.log(taskList)
   }
-  let tasks = [{ date: '', type: '' }]
-  const [taskList, setTaskList] = useState(tasks)
+
   return (
     <div className='container'>
       <Title title={'Task Tracker App'} classes={'title text-center'} />
@@ -38,7 +41,7 @@ const TaskTrackerApp = () => {
           <li>Task</li>
         </ul>
 
-        <Tasks
+        <AddTaskForm
           date={newTask.date}
           setData={handleChange}
           type={newTask.type}
@@ -49,7 +52,7 @@ const TaskTrackerApp = () => {
           {taskList.map((task, i) => {
             console.log(task)
             return task.date && task.type ? (
-              <NewTask key={i} date={task.date} type={task.type} />
+              <DisplayTask key={i} date={task.date} type={task.type} />
             ) : null
           })}
         </ul>

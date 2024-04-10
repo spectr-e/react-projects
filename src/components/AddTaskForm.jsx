@@ -1,6 +1,6 @@
 import Button from './Button'
 
-const Tasks = ({ date, type, setData, buttonClick }) => {
+const AddTaskForm = ({ date, type, setData, buttonClick }) => {
   return (
     <div
       className='dsf'
@@ -30,4 +30,4 @@ const Tasks = ({ date, type, setData, buttonClick }) => {
   )
 }
 
-export default Tasks
+export default AddTaskForm
