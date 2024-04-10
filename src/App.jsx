@@ -22,6 +22,7 @@ import {
   TextAnimationApp,
   CompoundInterestApp,
   SpacePenguinApp,
+  TaskTrackerApp,
 } from './Projects'
 
 function App() {
@@ -47,7 +48,8 @@ function App() {
         {/* <NavBarApp /> */}
         {/* <TextAnimationApp /> */}
         {/* <CompoundInterestApp /> */}
-        <SpacePenguinApp />
+        {/* <SpacePenguinApp /> */}
+        <TaskTrackerApp />
       </div>
     </div>
   )
