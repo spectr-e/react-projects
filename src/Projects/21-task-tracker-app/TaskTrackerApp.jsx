@@ -67,7 +67,6 @@ const TaskTrackerApp = () => {
                 type={task.type}
                 deleteNote={handleDelete}
                 taskClick={handleCompleted}
-                deleteNote={handleDelete}
               />
             ) : null
           })}
