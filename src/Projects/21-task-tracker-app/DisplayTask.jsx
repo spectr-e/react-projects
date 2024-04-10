@@ -10,7 +10,12 @@ const DisplayTask = ({ type, date, deleteNote, taskClick }) => {
         <small className='text-danger'>{date}</small>
       </div>
       <Button
-        text={<RiDeleteBin6Fill className='text-danger font-lg' />}
+        text={
+          <RiDeleteBin6Fill
+            className='text-danger font-lg'
+            style={{ userSelect: 'none', pointerEvents: 'none' }}
+          />
+        }
         handleClick={deleteNote}
         classes={'btn-light btn-sm'}
       />
