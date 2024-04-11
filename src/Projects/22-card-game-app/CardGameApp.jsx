@@ -46,10 +46,12 @@ const CardGameApp = () => {
           <Title title={'0-1'} />
           <main className='container m-auto game-board'>
             <section className='player_1'>
-              <Card />
+              <Card player={'player_1'} />
             </section>
             <section className='fog-of-war'></section>
-            <section className='player_2'></section>
+            <section className='player_2'>
+              <Card player={'player_2'} />
+            </section>
           </main>
         </>
       )}
