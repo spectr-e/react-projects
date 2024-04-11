@@ -21,7 +21,10 @@ import TextAnimationApp from './18-text-animation-app/TextAnimationApp'
 import CompoundInterestApp from './19-compound-interest-calc-app/CompoundInterestCalcApp'
 import SpacePenguinApp from './20-space-penguin-app/SpacePenguinApp'
 import TaskTrackerApp from './21-task-tracker-app/TaskTrackerApp'
+import CardGameApp from './22-card-game-app/CardGameApp'
+
 export {
+  CardGameApp,
   TaskTrackerApp,
   SpacePenguinApp,
   CompoundInterestApp,
