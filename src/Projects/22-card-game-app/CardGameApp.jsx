@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button, Title } from '../../components'
+import './CardGame.css'
 
 const CardGameApp = () => {
   const [start, setStart] = useState(false)
