@@ -30,7 +30,13 @@ const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
       <div className='card-body'>
         <h4 className='mb-1'>
           {unitTypeName ? unitTypeName : 'Unit type name'}
-          <img src={unitTypeImg} alt='unit type' />
+          <img
+            src={unitTypeImg}
+            alt='unit type'
+            style={{
+              background: '#fff',
+            }}
+          />
         </h4>
       </div>
     </div>
