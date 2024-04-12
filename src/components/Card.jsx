@@ -1,6 +1,6 @@
 import { Shield, Swords } from '../assets'
 
-const Card = ({ player, defenseVal, attackVal }) => {
+const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
   const iconStyle = {
     marginRight: 10,
     width: 20,
@@ -27,6 +27,12 @@ const Card = ({ player, defenseVal, attackVal }) => {
           <span>{!attackVal ? '00' : attackVal}</span>
         </div>
       </section>
+      <div className='card-body'>
+        <h4 className='mb-1'>
+          {unitTypeName ? unitTypeName : 'Unit type name'}
+          <img src={unitTypeImg} alt='unit type' />
+        </h4>
+      </div>
     </div>
   )
 }

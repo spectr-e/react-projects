@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button, Card, Title } from '../../components'
 import './CardGame.css'
+import { Spearman, Warhorse } from '../../assets'
 
 const CardGameApp = () => {
   const [start, setStart] = useState(false)
@@ -46,11 +47,29 @@ const CardGameApp = () => {
           <Title title={'0-1'} />
           <main className='container m-auto game-board'>
             <section className='player_1'>
-              <Card player={'player_1'} />
+              <Card
+                player={'player_1'}
+                unitTypeImg={Warhorse}
+                unitTypeName={'Sword Calvary'}
+              />
+              <Card
+                player={'player_1'}
+                unitTypeImg={Spearman}
+                unitTypeName={'Spear Man'}
+              />
             </section>
             <section className='fog-of-war'></section>
             <section className='player_2'>
-              <Card player={'player_2'} />
+              <Card
+                player={'player_2'}
+                unitTypeImg={Warhorse}
+                unitTypeName={'Sword Calvary'}
+              />
+              <Card
+                player={'player_1'}
+                unitTypeImg={Spearman}
+                unitTypeName={'Spear Man'}
+              />
             </section>
           </main>
         </>
