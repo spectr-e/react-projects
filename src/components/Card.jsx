@@ -7,6 +7,12 @@ const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
     background: 'transparent',
   }
 
+  let mirror
+  const mirrorImg = () => {
+    player === 'player_2' ? (mirror = 'scaleX(-1)') : (mirror = 'scaleX(1)')
+    return mirror
+  }
+
   return (
     <div
       className={`card text-center m-1 shadow-md ${
@@ -35,6 +41,7 @@ const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
             alt='unit type'
             style={{
               background: '#fff',
+              transform: `${mirror}`,
             }}
           />
         </h4>
