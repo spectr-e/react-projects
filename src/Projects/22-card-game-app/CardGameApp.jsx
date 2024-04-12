@@ -68,7 +68,6 @@ const CardGameApp = () => {
                 unitTypeName={'Spear Man'}
               />
             </section>
-            <section className='fog-of-war'></section>
             <section className='player_2'>
               <Card
                 player={'player_2'}
