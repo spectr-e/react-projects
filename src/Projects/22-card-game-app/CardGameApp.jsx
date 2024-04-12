@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Button, Card, Title } from '../../components'
 import './CardGame.css'
-import { Spearman, Warhorse } from '../../assets'
+import { Archer, Spearman, Warhorse } from '../../assets'
 
 const CardGameApp = () => {
   const [start, setStart] = useState(false)
@@ -57,6 +57,16 @@ const CardGameApp = () => {
                 unitTypeImg={Spearman}
                 unitTypeName={'Spear Man'}
               />
+              <Card
+                player={'player_1'}
+                unitTypeImg={Archer}
+                unitTypeName={'Sword Calvary'}
+              />
+              <Card
+                player={'player_1'}
+                unitTypeImg={Spearman}
+                unitTypeName={'Spear Man'}
+              />
             </section>
             <section className='fog-of-war'></section>
             <section className='player_2'>
@@ -66,8 +76,18 @@ const CardGameApp = () => {
                 unitTypeName={'Sword Calvary'}
               />
               <Card
-                player={'player_1'}
+                player={'player_2'}
                 unitTypeImg={Spearman}
+                unitTypeName={'Spear Man'}
+              />
+              <Card
+                player={'player_2'}
+                unitTypeImg={Warhorse}
+                unitTypeName={'Sword Calvary'}
+              />
+              <Card
+                player={'player_2'}
+                unitTypeImg={Archer}
                 unitTypeName={'Spear Man'}
               />
             </section>

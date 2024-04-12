@@ -1,6 +1,14 @@
-import { Shield, Swords } from '../assets'
+import { Horn, Shield, Swords } from '../assets'
 
-const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
+const Card = ({
+  player,
+  defenseVal,
+  attackVal,
+  unitTypeName,
+  unitTypeImg,
+  moraleVal,
+  unitVal,
+}) => {
   const iconStyle = {
     marginRight: 10,
     width: 20,
@@ -8,11 +16,11 @@ const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
   }
 
   let mirror
-  const mirrorImg = () => {
+  const mirrorImg = (player) => {
     player === 'player_2' ? (mirror = 'scaleX(-1)') : (mirror = 'scaleX(1)')
     return mirror
   }
-
+  mirrorImg(player)
   return (
     <div
       className={`card text-center m-1 shadow-md ${
@@ -33,7 +41,7 @@ const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
           <span>{!attackVal ? '00' : attackVal}</span>
         </div>
       </section>
-      <div className='card-body'>
+      <section className='card-body'>
         <h4 className='mb-1'>
           {unitTypeName ? unitTypeName : 'Unit type name'}
           <img
@@ -45,7 +53,20 @@ const Card = ({ player, defenseVal, attackVal, unitTypeName, unitTypeImg }) => {
             }}
           />
         </h4>
-      </div>
+      </section>
+      <section
+        className='card-footer d-flex'
+        style={{ justifyContent: 'space-between' }}
+      >
+        <div className='defense'>
+          <img src={Horn} alt='defense' style={iconStyle} />
+          <span>{!moraleVal ? '00' : moraleVal}</span>
+        </div>
+        <div className='attack'>
+          <img src={unitTypeImg} alt='attack' style={iconStyle} />
+          <span>{!unitVal ? '00' : attackVal}</span>
+        </div>
+      </section>
     </div>
   )
 }
