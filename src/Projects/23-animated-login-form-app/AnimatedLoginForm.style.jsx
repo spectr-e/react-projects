@@ -16,7 +16,7 @@ export const Animation = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 72px;
-  border: 1px solid #333;
+  border: 4px solid #333;
   border-radius: 4px;
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
 `

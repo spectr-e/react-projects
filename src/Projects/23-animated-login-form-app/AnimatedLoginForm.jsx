@@ -3,6 +3,12 @@ import { Button, Form } from '../../components'
 import { Container, Animation } from './AnimatedLoginForm.style'
 
 const AnimatedLoginForm = () => {
+  const [rotate, setRotate] = useState({
+    animation: '',
+    borderColor: '',
+    background: '',
+  })
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -31,6 +37,9 @@ const AnimatedLoginForm = () => {
     }
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
   return (
     <Container>
       <Animation></Animation>
@@ -54,7 +63,11 @@ const AnimatedLoginForm = () => {
           onChange={handleChange}
         />
         <div className='form-group'>
-          <Button classes={'btn-block'} text='Submit' />
+          <Button
+            classes={'btn-block'}
+            text='Submit'
+            handleSubmit={handleSubmit}
+          />
           <small className='text-accept'>Don't have an account?</small>
           <label
             htmlFor=''
