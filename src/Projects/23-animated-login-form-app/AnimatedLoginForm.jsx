@@ -5,8 +5,8 @@ import { Container, Animation } from './AnimatedLoginForm.style'
 const AnimatedLoginForm = () => {
   const [rotate, setRotate] = useState({
     animation: '',
-    borderColor: '',
-    background: '',
+    bordercolor: '',
+    bg: '',
   })
 
   const [formData, setFormData] = useState({
@@ -42,8 +42,8 @@ const AnimatedLoginForm = () => {
     if (formData.email && formData.password) {
       setRotate({
         animation: 'animate',
-        borderColor: 'green',
-        background: 'green',
+        bordercolor: 'green',
+        bg: 'green',
       })
     } else {
       setRotate({ animation: '', borderColor: 'red' })

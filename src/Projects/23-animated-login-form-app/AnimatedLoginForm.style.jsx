@@ -54,13 +54,13 @@ const animateLogo = keyframes`
 export const Animation = styled.div`
   width: 240px;
   height: 240px;
-  background: ${(props) => props.background || `URL(${Avatar}) center/cover`};
+  background: ${(props) => props.bg || `URL(${Avatar}) center/cover`};
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   margin-top: 72px;
-  border: 4px solid ${(props) => props.borderColor || '#333'};
+  border: 4px solid ${(props) => props.bordercolor || '#333'};
   border-radius: 4px;
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
   &.animate {
