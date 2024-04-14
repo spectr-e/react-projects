@@ -1,11 +1,33 @@
 import { styled, keyframes } from 'styled-components'
 import { Avatar } from '../../assets'
 
+const animateContainer = keyframes`
+0% {
+  transform: rotate(0deg);
+}
+25% {
+  transform: rotate(45deg);
+}
+50% {
+  transform: rotate(90deg);
+}
+75% {
+  transform: rotate(180deg);
+}
+100% {
+}
+`
+
 export const Container = styled.div`
   margin: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+  &.animate {
+    animation: ${animateContainer} 1s linear;
+    transform: rotate(180deg) translateY(400px);
+    transition: 1s linear;
+  }
 `
 const animateLogo = keyframes`
 0% {
