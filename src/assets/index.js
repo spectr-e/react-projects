@@ -13,8 +13,10 @@ import Archer from './archer.svg'
 import Spearman from './spearman.svg'
 import Swords from './swords.svg'
 import Warhorse from './warhorse.svg'
+import Avatar from './avatar.jpg'
 
 export {
+  Avatar,
   Dog,
   LockImg,
   HomeImg,

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Button, Form } from '../../components'
-import { Container } from './AnimatedLoginForm.style'
+import { Container, Animation } from './AnimatedLoginForm.style'
 
 const AnimatedLoginForm = () => {
   const [formData, setFormData] = useState({
@@ -33,6 +33,7 @@ const AnimatedLoginForm = () => {
 
   return (
     <Container>
+      <Animation></Animation>
       <form action='' style={formStyle} className='card m-1 m-auto'>
         <h2 className='subtitle my-2'>Login</h2>
         <Form
