@@ -32,7 +32,7 @@ const AnimatedLoginForm = () => {
   }
 
   return (
-    <Container className='container'>
+    <Container>
       <form action='' style={formStyle} className='card m-1 m-auto'>
         <h2 className='subtitle my-2'>Login</h2>
         <Form
