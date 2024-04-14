@@ -14,7 +14,7 @@ const AnimatedLoginForm = () => {
   }, [])
 
   const formStyle = {
-    width: 360,
+    width: 440,
     marginTop: '16vh',
   }
 
