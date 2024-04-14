@@ -24,6 +24,7 @@ import {
   SpacePenguinApp,
   TaskTrackerApp,
   CardGameApp,
+  AnimatedLoginForm,
 } from './Projects'
 
 function App() {
@@ -51,7 +52,8 @@ function App() {
         {/* <CompoundInterestApp /> */}
         {/* <SpacePenguinApp /> */}
         {/* <TaskTrackerApp /> */}
-        <CardGameApp />
+        {/* <CardGameApp /> */}
+        <AnimatedLoginForm />
       </div>
     </div>
   )
