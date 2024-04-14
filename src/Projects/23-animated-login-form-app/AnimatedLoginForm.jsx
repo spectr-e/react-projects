@@ -1,7 +1,12 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Form } from '../../components'
 
 const AnimatedLoginForm = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  })
+
   const emailInput = useRef(null)
 
   useEffect(() => {
@@ -23,12 +28,14 @@ const AnimatedLoginForm = () => {
           refer={emailInput}
           inputName={'email'}
           labelFor={'email'}
+          values={formData.email}
         />
         <Form
           labelText={'Password'}
           inputType='password'
           inputName={'password'}
           labelFor={'password'}
+          values={formData.password}
         />
       </form>
     </div>
