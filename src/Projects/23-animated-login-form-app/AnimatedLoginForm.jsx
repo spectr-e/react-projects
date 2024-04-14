@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Form } from '../../components'
+import { Button, Form } from '../../components'
 
 const AnimatedLoginForm = () => {
   const [formData, setFormData] = useState({
@@ -51,6 +51,21 @@ const AnimatedLoginForm = () => {
           values={formData.password}
           onChange={handleChange}
         />
+        <div className='form-group'>
+          <Button classes={'btn-block'} text='Submit' />
+          <small className='text-accept'>Don't have an account?</small>
+          <label
+            htmlFor=''
+            style={{
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              fontWeight: 400,
+            }}
+            className='mt-1 text-right'
+          >
+            Register
+          </label>
+        </div>
       </form>
     </div>
   )
