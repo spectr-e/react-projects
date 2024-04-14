@@ -18,6 +18,18 @@ const AnimatedLoginForm = () => {
     marginTop: '16vh',
   }
 
+  const handleChange = (e) => {
+    switch (e.target.name) {
+      case 'email':
+        setFormData({ ...formData, email: e.target.value })
+        break
+      case 'password':
+        setFormData({ ...formData, password: e.target.value })
+      default:
+        break
+    }
+  }
+
   return (
     <div className='container'>
       <form action='' style={formStyle} className='card m-1 m-auto'>
@@ -29,6 +41,7 @@ const AnimatedLoginForm = () => {
           inputName={'email'}
           labelFor={'email'}
           values={formData.email}
+          onChange={handleChange}
         />
         <Form
           labelText={'Password'}
@@ -36,6 +49,7 @@ const AnimatedLoginForm = () => {
           inputName={'password'}
           labelFor={'password'}
           values={formData.password}
+          onChange={handleChange}
         />
       </form>
     </div>
