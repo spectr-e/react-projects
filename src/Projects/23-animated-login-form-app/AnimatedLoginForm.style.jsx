@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { styled, keyframes } from 'styled-components'
 import { Avatar } from '../../assets'
 
 export const Container = styled.div`
@@ -7,6 +7,28 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 `
+const animateLogo = keyframes`
+0% {
+  border-radius: 0 0 0 0;
+  transform: rotate(0deg);
+}
+25% {
+  border-radius: 25%;
+  transform: rotate(45deg);
+}
+50% {
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+75% {
+  border-radius: 75%;
+  transform: rotate(180deg);
+}
+100% {
+  transform: scale(0);
+}
+`
+
 export const Animation = styled.div`
   width: 240px;
   height: 240px;
@@ -19,4 +41,7 @@ export const Animation = styled.div`
   border: 4px solid #333;
   border-radius: 4px;
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
+  &.animate {
+    animation: ${animateLogo} 1s linear;
+  }
 `

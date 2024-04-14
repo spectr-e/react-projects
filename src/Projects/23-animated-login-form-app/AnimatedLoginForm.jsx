@@ -39,11 +39,21 @@ const AnimatedLoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (formData.email && formData.password) {
+      setRotate({
+        animation: 'animate',
+      })
+    }
   }
   return (
     <Container>
       <Animation></Animation>
-      <form action='' style={formStyle} className='card m-1 m-auto'>
+      <form
+        action=''
+        style={formStyle}
+        className='card m-1 m-auto'
+        onSubmit={handleSubmit}
+      >
         <h2 className='subtitle my-2'>Login</h2>
         <Form
           labelText={'Email'}
@@ -63,11 +73,7 @@ const AnimatedLoginForm = () => {
           onChange={handleChange}
         />
         <div className='form-group'>
-          <Button
-            classes={'btn-block'}
-            text='Submit'
-            handleSubmit={handleSubmit}
-          />
+          <Button classes={'btn-block'} text='Submit' btnType={'submit'} />
           <small className='text-accept'>Don't have an account?</small>
           <label
             htmlFor=''
