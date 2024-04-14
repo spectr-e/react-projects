@@ -19,11 +19,11 @@ const Form = ({
     padding: '8px 12px',
     fontSize: '12px',
     borderRadius: '4px',
-    width: 360,
+    width: 300,
   }
   return (
-    <div className='dsf flex-column'>
-      <label htmlFor={labelFor} className='font-semibold font-sm '>
+    <div className='dsf flex-column mb-1'>
+      <label htmlFor={labelFor} className='font-semibold font-sm'>
         {labelText}
       </label>
       <input
