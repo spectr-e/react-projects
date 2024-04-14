@@ -42,12 +42,20 @@ const AnimatedLoginForm = () => {
     if (formData.email && formData.password) {
       setRotate({
         animation: 'animate',
+        borderColor: 'green',
+        background: 'green',
       })
+    } else {
+      setRotate({ animation: '', borderColor: 'red' })
     }
   }
   return (
-    <Container>
-      <Animation></Animation>
+    <Container className={rotate.animation}>
+      <Animation
+        background={rotate.background}
+        borderColor={rotate.borderColor}
+        className={rotate.animation}
+      ></Animation>
       <form
         action=''
         style={formStyle}
