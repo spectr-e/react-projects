@@ -43,5 +43,9 @@ export const Animation = styled.div`
   box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
   &.animate {
     animation: ${animateLogo} 1s linear;
+    transform: rotate(180deg);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 1s linear;
   }
 `
