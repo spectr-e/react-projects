@@ -23,8 +23,10 @@ import SpacePenguinApp from './20-space-penguin-app/SpacePenguinApp'
 import TaskTrackerApp from './21-task-tracker-app/TaskTrackerApp'
 import CardGameApp from './22-card-game-app/CardGameApp'
 import AnimatedLoginForm from './23-animated-login-form-app/AnimatedLoginForm'
+import PhoneBookApp from './24-phone-book-app/PhoneBookApp'
 
 export {
+  PhoneBookApp,
   AnimatedLoginForm,
   CardGameApp,
   TaskTrackerApp,
