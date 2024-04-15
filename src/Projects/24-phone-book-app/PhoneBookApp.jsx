@@ -5,7 +5,7 @@ import { contacts } from '../../data'
 import SearchFilter from './SearchFilter'
 
 const PhoneBookApp = () => {
-  const [showContacts, setShowContacts] = useState(true)
+  const [showContacts, setShowContacts] = useState(false)
   const db = contacts
 
   const toggleContacts = () => {
@@ -19,7 +19,7 @@ const PhoneBookApp = () => {
         <SearchFilter handleToggle={toggleContacts} />
 
         <div style={{ height: 600, overflow: 'auto' }}>
-          <h2 className='subtitle text-center'>Display Contacts</h2>
+          <h2 className='subtitle text-center'>Contacts</h2>
           {showContacts && <ContactList contacts={db} />}
         </div>
       </main>
