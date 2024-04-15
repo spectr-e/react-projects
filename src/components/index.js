@@ -15,9 +15,8 @@ import Moon from './Moon'
 import Planet from './Planet'
 import AddTaskForm from './AddTaskForm'
 import Card from './Card'
-import Contacts from './Contacts'
+
 export {
-  Contacts,
   Card,
   AddTaskForm,
   SpaceShip,

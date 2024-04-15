@@ -19,7 +19,7 @@ const ContactStyle = styled.li`
   }
 `
 
-const Contacts = ({ icon, firstName, lastName, phoneNo }) => {
+const Contact = ({ icon, firstName, lastName, phoneNo }) => {
   return (
     <ContactStyle>
       <div>
@@ -43,4 +43,4 @@ const Contacts = ({ icon, firstName, lastName, phoneNo }) => {
   )
 }
 
-export default Contacts
+export default Contact

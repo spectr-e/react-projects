@@ -1,4 +1,4 @@
-import { Contacts } from '../../components'
+import Contact from './Contact'
 
 const ContactList = ({ contacts }) => {
   // const [icon, firstName, lastName, phoneNo] = contacts
@@ -21,7 +21,7 @@ const ContactList = ({ contacts }) => {
   return (
     <ul>
       {contacts.map((contact, index) => (
-        <Contacts
+        <Contact
           key={index}
           icon={`https://api.dicebear.com/8.x/${randomImg()}/svg`}
           firstName={contact.first_name}
