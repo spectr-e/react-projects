@@ -1,7 +1,7 @@
 import { FaAddressBook, FaArrowsAltV } from 'react-icons/fa'
 import { Button } from '../../components'
 
-const SearchFilter = ({ handleToggle }) => {
+const SearchFilter = ({ handleToggle, handleToggleSortAZ }) => {
   return (
     <section className='text-center'>
       <Button
@@ -16,7 +16,12 @@ const SearchFilter = ({ handleToggle }) => {
         className='mb-2 mx-1'
         style={{ padding: '4px 8px' }}
       />
-      <Button classes={'btn-dark'} text={''} icon={<FaArrowsAltV />} />
+      <Button
+        classes={'btn-dark'}
+        text={''}
+        icon={<FaArrowsAltV />}
+        handleClick={handleToggleSortAZ}
+      />
     </section>
   )
 }
