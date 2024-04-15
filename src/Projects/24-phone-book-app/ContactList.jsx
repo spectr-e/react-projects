@@ -19,14 +19,17 @@ const ContactList = ({ contacts }) => {
   }
 
   return (
-    <div>
-      <Contacts
-        icon={`https://api.dicebear.com/8.x/${randomImg()}/svg`}
-        firstName={''}
-        lastName={''}
-        phoneNo={''}
-      />
-    </div>
+    <ul>
+      {contacts.map((contact, index) => (
+        <Contacts
+          key={index}
+          icon={`https://api.dicebear.com/8.x/${randomImg()}/svg`}
+          firstName={contact.first_name}
+          lastName={contact.last_name}
+          phoneNo={contact.phone}
+        />
+      ))}
+    </ul>
   )
 }
 

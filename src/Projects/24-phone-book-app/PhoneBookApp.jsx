@@ -13,13 +13,7 @@ const PhoneBookApp = () => {
       <main className='bg-dark text-light p-1'>
         <div style={{ height: 600, overflow: 'auto' }}>
           <h2 className='subtitle text-center'>Display Contacts</h2>
-          {showContacts && (
-            <ContactList
-              contacts={db.map((contact) => {
-                return contact
-              })}
-            />
-          )}
+          {showContacts && <ContactList contacts={db} />}
         </div>
       </main>
     </div>
