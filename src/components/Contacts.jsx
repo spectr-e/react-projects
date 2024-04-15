@@ -1,6 +1,24 @@
 import styled from 'styled-components'
 import { FaUserAlt, FaPhone } from 'react-icons/fa'
-const ContactStyle = styled.li``
+
+const ContactStyle = styled.li`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 4px 8px;
+  border-bottom: 1px solid #666;
+  &:hover {
+    cursor: pointer;
+    background-color: #666;
+  }
+  img {
+    height: 48px;
+    border-radius: 50%;
+  }
+`
+
 const Contacts = ({ icon, firstName, lastName, phoneNo }) => {
   return (
     <ContactStyle>
