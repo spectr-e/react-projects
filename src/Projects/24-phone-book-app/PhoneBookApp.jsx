@@ -7,6 +7,7 @@ import SearchFilter from './SearchFilter'
 const PhoneBookApp = () => {
   const [sortAZ, setSortAZ] = useState(true)
   const [showContacts, setShowContacts] = useState(false)
+  const [search, setSearch] = useState('')
   const db = contacts
 
   const toggleContacts = () => {
@@ -22,12 +23,14 @@ const PhoneBookApp = () => {
       <Title title={'Phonebook App'} classes={'title text-center'} />
       <main className='bg-dark text-light p-1'>
         <SearchFilter
+          handleSearch={setSearch}
           handleToggle={toggleContacts}
           handleToggleSortAZ={toggleSortAZ}
         />
 
         <div style={{ height: 600, overflow: 'auto' }}>
           <h2 className='subtitle text-center'>Contacts</h2>
+
           {showContacts && (
             <ContactList
               contacts={
