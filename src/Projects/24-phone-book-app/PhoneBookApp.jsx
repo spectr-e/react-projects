@@ -3,11 +3,11 @@ import { Title } from '../../components'
 import ContactList from './ContactList'
 
 const PhoneBookApp = () => {
-  const [showContacts, setShowContacts] = useState(false)
+  const [showContacts, setShowContacts] = useState(true)
 
   return (
-    <div className='container text-center'>
-      <Title title={'Phonebook App'} />
+    <div className='container'>
+      <Title title={'Phonebook App'} classes={'title text-center'} />
       <main className='bg-dark text-light p-1'>
         <div style={{ height: 600, overflow: 'auto' }}>
           <h2 className='subtitle text-center'>Display Contacts</h2>
