@@ -33,11 +33,20 @@ const PhoneBookApp = () => {
 
           {showContacts && (
             <ContactList
-              contacts={
-                sortAZ
-                  ? db.sort((a, b) => a.first_name.localeCompare(b.first_name))
-                  : db.sort((a, b) => b.first_name.localeCompare(a.first_name))
-              }
+              contacts={(sortAZ
+                ? db.sort((a, b) => a.first_name.localeCompare(b.first_name))
+                : db.sort((a, b) => b.first_name.localeCompare(a.first_name))
+              ).filter((contact) => {
+                if (!search) {
+                  return contact
+                } else if (
+                  contact.first_name
+                    .toLocaleLowerCase()
+                    .includes(search.toLowerCase())
+                ) {
+                  return contact
+                }
+              })}
             />
           )}
         </div>
