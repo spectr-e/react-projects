@@ -35,6 +35,7 @@ const Contacts = ({ icon, firstName, lastName, phoneNo }) => {
         '000-000'
       ) : (
         <a href={`tel: ${phoneNo}`} className='text-info'>
+          <FaPhone className='text-success ml-1' />
           {phoneNo}
         </a>
       )}
