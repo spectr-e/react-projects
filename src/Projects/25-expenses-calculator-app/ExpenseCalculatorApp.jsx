@@ -1,4 +1,5 @@
 import { Title } from '../../components'
+import ExpensesForm from './ExpensesForm'
 
 const ExpenseCalculatorApp = () => {
   return (
@@ -15,6 +16,7 @@ const ExpenseCalculatorApp = () => {
       >
         <aside>
           {/* ExpensesForm Component */}
+          <ExpensesForm />
           <section className='card mt-2 bg-primary text-light'>
             <div className='card-body'>
               {/* <BudgetStyle>
