@@ -26,6 +26,7 @@ import {
   CardGameApp,
   AnimatedLoginForm,
   PhoneBookApp,
+  ExpenseCalculatorApp,
 } from './Projects'
 
 function App() {
@@ -55,7 +56,8 @@ function App() {
         {/* <TaskTrackerApp /> */}
         {/* <CardGameApp /> */}
         {/* <AnimatedLoginForm /> */}
-        <PhoneBookApp />
+        {/* <PhoneBookApp /> */}
+        <ExpenseCalculatorApp />
       </div>
     </div>
   )

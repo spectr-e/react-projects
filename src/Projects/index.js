@@ -24,8 +24,9 @@ import TaskTrackerApp from './21-task-tracker-app/TaskTrackerApp'
 import CardGameApp from './22-card-game-app/CardGameApp'
 import AnimatedLoginForm from './23-animated-login-form-app/AnimatedLoginForm'
 import PhoneBookApp from './24-phone-book-app/PhoneBookApp'
-
+import ExpenseCalculatorApp from './25-expenses-calculator-app/ExpenseCalculatorApp'
 export {
+  ExpenseCalculatorApp,
   PhoneBookApp,
   AnimatedLoginForm,
   CardGameApp,
