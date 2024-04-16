@@ -21,6 +21,7 @@ const ExpenseCalculatorApp = () => {
                 <h3>Budget: KES</h3>
                 <input type='number' value={''} />
               </BudgetStyle> */}
+
               <h3 className='mb-1'>Total Expenses: KES</h3>
               {/* Calculate Savings */}
               <h3>Savings: KES</h3>
@@ -28,6 +29,7 @@ const ExpenseCalculatorApp = () => {
           </section>
         </aside>
       </section>
+      <section>{/* ExpensesList Component */}</section>
     </main>
   )
 }
