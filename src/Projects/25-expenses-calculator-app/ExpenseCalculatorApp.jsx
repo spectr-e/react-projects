@@ -26,7 +26,7 @@ const ExpenseCalculatorApp = () => {
             <div className='card-body'>
               <BudgetStyle>
                 <h3>Budget (KES): </h3>
-                <input type='number' value={''} />
+                <input type='number' />
               </BudgetStyle>
               <h3 className='mb-1'>Total Expenses (KES): </h3>
 
