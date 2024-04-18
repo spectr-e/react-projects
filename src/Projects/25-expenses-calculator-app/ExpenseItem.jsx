@@ -1,7 +1,14 @@
 import { MdDelete, MdEdit } from 'react-icons/md'
 import { Button } from '../../components'
 
-const ExpenseItem = ({ charge, date, amount }) => {
+const ExpenseItem = ({
+  charge,
+  date,
+  amount,
+  handleEdit,
+  handleDelete,
+  id,
+}) => {
   return (
     <div className='expense-details'>
       <div className='d-flex flex-column' style={{ alignItems: 'flex-start' }}>
