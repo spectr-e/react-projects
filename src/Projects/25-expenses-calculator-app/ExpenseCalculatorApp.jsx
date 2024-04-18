@@ -11,7 +11,7 @@ const initalExpenses = localStorage.getItem('expenses')
   : []
 
 const ExpenseCalculatorApp = () => {
-  const [expenses, setExpenses] = useState('')
+  const [expenses, setExpenses] = useState([])
   const [date, setDate] = useState('')
   const [amount, setAmount] = useState('')
   const [item, setItem] = useState('')

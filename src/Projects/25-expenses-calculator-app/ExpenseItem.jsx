@@ -1,18 +1,14 @@
 import { MdDelete, MdEdit } from 'react-icons/md'
 import { Button } from '../../components'
 
-const ExpenseItem = ({
-  charge,
-  date,
-  amount,
-  handleEdit,
-  handleDelete,
-  id,
-}) => {
+const ExpenseItem = ({ expense, handleEdit, handleDelete }) => {
+  // Destructure from expense object
+  const { item, date, amount, id } = expense
+
   return (
     <div className='expense-details'>
       <div className='d-flex flex-column' style={{ alignItems: 'flex-start' }}>
-        <h4 className='text-primary'>{charge}</h4>
+        <h4 className='text-primary'>{item}</h4>
         <small className='text-danger'>{date}</small>
       </div>
       <div className='text-success'>${amount}</div>

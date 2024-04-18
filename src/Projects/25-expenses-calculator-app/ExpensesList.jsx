@@ -5,8 +5,9 @@ const ExpensesList = ({ clearItems, expenses = [] }) => {
   return (
     <>
       <ul className='list'>
-        {/* ExpenseItem */}
-        <ExpenseItem />
+        {expenses.map((exp, key) => {
+          return <ExpenseItem expense={exp} key={key} />
+        })}
       </ul>
       {expenses.length > 0 && (
         <Button
