@@ -4,23 +4,48 @@ import ExpensesForm from './ExpensesForm'
 import ExpensesList from './ExpensesList'
 import { BudgetStyle } from './styles/BudgetStyle'
 
+// Local Storage
+const initalExpenses = localStorage.getItem('expenses')
+  ? JSON.parse(localStorage.getItem('expenses'))
+  : []
+
 const ExpenseCalculatorApp = () => {
   const [expenses, setExpenses] = useState('')
   const [date, setDate] = useState('')
   const [amount, setAmount] = useState('')
-  const [charge, setCharge] = useState('')
+  const [item, setItem] = useState('')
   const [budget, setBudget] = useState('')
 
   const inputBudget = useRef(null)
   useEffect(() => {
     inputBudget.current.focus()
-  }, [])
+    localStorage.setItem('expenses', JSON.stringify(expenses))
+  }, [expenses])
 
+  // Event handlers
+  const handleChange = (e) => {
+    switch (e.target.name) {
+      case 'budget':
+        setBudget(e.target.value)
+        break
+      case 'date':
+        setDate(e.target.value)
+        break
+      case 'item':
+        setItem(e.target.value)
+        break
+      case 'amount':
+        setAmount(e.target.value)
+        break
+      default:
+        break
+    }
+  }
   return (
     <main className='container'>
       <Title title={'Expense Calculator'} classes={'text-center title'} />
-
       {/* TODO: Alert Component */}
+
       <section
         style={{
           display: 'grid',
@@ -31,7 +56,12 @@ const ExpenseCalculatorApp = () => {
       >
         <aside>
           {/* ExpensesForm Component */}
-          <ExpensesForm date={date} charge={charge} amount={amount} />
+          <ExpensesForm
+            date={date}
+            item={item}
+            amount={amount}
+            onChange={handleChange}
+          />
 
           <section className='card text-right mt-2 bg-primary text-light'>
             {/* Display Total */}
@@ -39,10 +69,11 @@ const ExpenseCalculatorApp = () => {
               <BudgetStyle>
                 <h3>Budget (KES) </h3>
                 <input
+                  name='budget'
                   ref={inputBudget}
                   type='number'
                   value={budget}
-                  onChange={(e) => setBudget(e.target.value)}
+                  onChange={handleChange}
                 />
               </BudgetStyle>
               <h3 className='mb-1'>Total Expenses (KES): </h3>

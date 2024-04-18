@@ -1,37 +1,31 @@
 import { MdAddCircle, MdEdit } from 'react-icons/md'
 import { Button, Form } from '../../components'
 
-const ExpensesForm = ({
-  handleSubmit,
-  date,
-  handleDate,
-  charge,
-  edit,
-  amount,
-  handleAmount,
-  handleCharge,
-}) => {
+const ExpensesForm = ({ onChange, onSubmit, date, item, edit, amount }) => {
   return (
-    <form onSubmit={handleSubmit} className='bg-primary text-light card'>
+    <form onSubmit={onSubmit} className='bg-primary text-light card'>
       <div className='card-body'>
         <Form
+          inputName={'date'}
           labelText={'Date'}
           inputType='date'
           values={date}
-          onChange={handleDate}
+          onChange={onChange}
         />
         <Form
+          inputName={'item'}
           labelText={'Expense'}
           inputType='text'
-          values={charge}
-          onChange={handleCharge}
+          values={item}
+          onChange={onChange}
           placeholderText={'e.g., rent'}
         />
         <Form
+          inputName={'amount'}
           labelText={'Amount'}
           inputType='number'
           values={amount}
-          onChange={handleAmount}
+          onChange={onChange}
           placeholderText={'e.g., 1,500'}
         />
         {edit ? (
