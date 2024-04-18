@@ -39,6 +39,7 @@ const ExpensesForm = ({ onChange, onSubmit, date, item, edit, amount }) => {
             classes={'btn-block btn-warning'}
             icon={<MdAddCircle className='btn-icon' />}
             text={'Add'}
+            btnType={'submit'}
           />
         )}
       </div>

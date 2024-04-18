@@ -19,7 +19,7 @@ const ExpenseCalculatorApp = () => {
 
   const inputBudget = useRef(null)
   useEffect(() => {
-    inputBudget.current.focus()
+    !inputBudget.current.value && inputBudget.current.focus()
     localStorage.setItem('expenses', JSON.stringify(expenses))
   }, [expenses])
 
