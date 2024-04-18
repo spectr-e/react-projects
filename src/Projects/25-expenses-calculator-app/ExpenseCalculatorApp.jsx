@@ -3,6 +3,7 @@ import { Title } from '../../components'
 import ExpensesForm from './ExpensesForm'
 import ExpensesList from './ExpensesList'
 import { BudgetStyle } from './styles/BudgetStyle'
+import { v4 as uuidV4 } from 'uuid'
 
 // Local Storage
 const initalExpenses = localStorage.getItem('expenses')
@@ -41,6 +42,26 @@ const ExpenseCalculatorApp = () => {
         break
     }
   }
+
+  const [id, setId] = useState(0)
+  let edit
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    if (date && item && amount > 0) {
+      if (edit) {
+        let tempExp = expenses.map((exp) => {
+          return exp.id === id ? { ...exp, date, item, amount } : exp
+        })
+        setExpenses(tempExp)
+      }
+    } else {
+      const singlExp = { id: uuidV4(), date, item, amount }
+      setExpenses([...expenses, singlExp])
+    }
+  }
+
   return (
     <main className='container'>
       <Title title={'Expense Calculator'} classes={'text-center title'} />
@@ -61,6 +82,7 @@ const ExpenseCalculatorApp = () => {
             item={item}
             amount={amount}
             onChange={handleChange}
+            onSubmit={handleSubmit}
           />
 
           <section className='card text-right mt-2 bg-primary text-light'>
