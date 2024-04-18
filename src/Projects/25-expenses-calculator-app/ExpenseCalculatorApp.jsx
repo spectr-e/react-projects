@@ -17,6 +17,7 @@ const ExpenseCalculatorApp = () => {
   const [item, setItem] = useState('')
   const [budget, setBudget] = useState('')
 
+  // App initialization
   const inputBudget = useRef(null)
   useEffect(() => {
     !inputBudget.current.value && inputBudget.current.focus()
@@ -24,6 +25,7 @@ const ExpenseCalculatorApp = () => {
   }, [expenses])
 
   // Event handlers
+  // On Change
   const handleChange = (e) => {
     switch (e.target.name) {
       case 'budget':
@@ -43,22 +45,21 @@ const ExpenseCalculatorApp = () => {
     }
   }
 
+  // On submit
   const [id, setId] = useState(0)
   let edit
-
   const handleSubmit = (e) => {
     e.preventDefault()
-
     if (date && item && amount > 0) {
       if (edit) {
         let tempExp = expenses.map((exp) => {
           return exp.id === id ? { ...exp, date, item, amount } : exp
         })
         setExpenses(tempExp)
+      } else {
+        const singlExp = { id: uuidV4(), date, item, amount }
+        setExpenses([...expenses, singlExp])
       }
-    } else {
-      const singlExp = { id: uuidV4(), date, item, amount }
-      setExpenses([...expenses, singlExp])
     }
   }
 
