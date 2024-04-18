@@ -1,12 +1,19 @@
 import { Button } from '../../components'
 import ExpenseItem from './ExpenseItem'
 
-const ExpensesList = ({ clearItems, expenses = [] }) => {
+const ExpensesList = ({ clearItems, handleEdit, handleDelete, expenses }) => {
   return (
     <>
       <ul className='list'>
         {expenses.map((exp, key) => {
-          return <ExpenseItem expense={exp} key={key} />
+          return (
+            <ExpenseItem
+              expense={exp}
+              key={key}
+              handleDelete={handleDelete}
+              handleEdit={handleEdit}
+            />
+          )
         })}
       </ul>
       {expenses.length > 0 && (

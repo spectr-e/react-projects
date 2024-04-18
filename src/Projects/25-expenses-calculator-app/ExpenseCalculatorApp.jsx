@@ -11,10 +11,12 @@ const initalExpenses = localStorage.getItem('expenses')
   : []
 
 const ExpenseCalculatorApp = () => {
-  const [expenses, setExpenses] = useState([])
-  const [date, setDate] = useState('')
-  const [amount, setAmount] = useState('')
-  const [item, setItem] = useState('')
+  const [expenses, setExpenses] = useState(initalExpenses)
+  const [formData, setFormData] = useState({
+    date: '',
+    amount: '',
+    item: '',
+  })
   const [budget, setBudget] = useState('')
 
   // App initialization
@@ -32,13 +34,13 @@ const ExpenseCalculatorApp = () => {
         setBudget(e.target.value)
         break
       case 'date':
-        setDate(e.target.value)
+        setFormData({ ...formData, date: e.target.value })
         break
       case 'item':
-        setItem(e.target.value)
+        setFormData({ ...formData, item: e.target.value })
         break
       case 'amount':
-        setAmount(e.target.value)
+        setFormData({ ...formData, amount: e.target.value })
         break
       default:
         break
@@ -50,18 +52,35 @@ const ExpenseCalculatorApp = () => {
   let edit
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (date && item && amount > 0) {
+    if (formData.date && formData.item && formData.amount > 0) {
       if (edit) {
         let tempExp = expenses.map((exp) => {
-          return exp.id === id ? { ...exp, date, item, amount } : exp
+          return exp.id === id
+            ? {
+                ...exp,
+                date: formData.date,
+                item: formData.item,
+                amount: formData.amount,
+              }
+            : exp
         })
         setExpenses(tempExp)
       } else {
-        const singlExp = { id: uuidV4(), date, item, amount }
+        const singlExp = {
+          id: uuidV4(),
+          date: formData.date,
+          item: formData.item,
+          amount: formData.amount,
+        }
         setExpenses([...expenses, singlExp])
       }
     }
   }
+  // On Edit
+  const handleEdit = (e) => {}
+
+  // On Delete
+  const handleDelete = (e) => {}
 
   return (
     <main className='container'>
@@ -79,16 +98,17 @@ const ExpenseCalculatorApp = () => {
         <aside>
           {/* ExpensesForm Component */}
           <ExpensesForm
-            date={date}
-            item={item}
-            amount={amount}
+            date={formData.date}
+            item={formData.item}
+            amount={formData.amount}
             onChange={handleChange}
             onSubmit={handleSubmit}
           />
 
+          {/* Display Totals Card*/}
           <section className='card text-right mt-2 bg-primary text-light'>
-            {/* Display Total */}
             <div className='card-body'>
+              {/* Display Budget*/}
               <BudgetStyle>
                 <h3>Budget (KES) </h3>
                 <input
@@ -99,9 +119,9 @@ const ExpenseCalculatorApp = () => {
                   onChange={handleChange}
                 />
               </BudgetStyle>
-              <h3 className='mb-1'>Total Expenses (KES): </h3>
 
-              {/* Calculate Savings */}
+              {/* Display Totals */}
+              <h3 className='mb-1'>Total Expenses (KES): </h3>
               <h3>Savings (KES): </h3>
             </div>
           </section>
@@ -109,7 +129,11 @@ const ExpenseCalculatorApp = () => {
 
         <section>
           {/* ExpensesList Component */}
-          <ExpensesList expenses={expenses} />
+          <ExpensesList
+            expenses={expenses}
+            handleEdit={handleEdit}
+            handleDelete={handleDelete}
+          />
         </section>
       </section>
     </main>
