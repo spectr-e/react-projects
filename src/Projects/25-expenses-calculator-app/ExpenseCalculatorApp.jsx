@@ -82,6 +82,12 @@ const ExpenseCalculatorApp = () => {
   // On Delete
   const handleDelete = (e) => {}
 
+  // On Clear
+  const handleClear = (e) => {
+    setExpenses([])
+    // TODO: Clear Alert
+  }
+
   return (
     <main className='container'>
       <Title title={'Expense Calculator'} classes={'text-center title'} />
@@ -133,6 +139,7 @@ const ExpenseCalculatorApp = () => {
             expenses={expenses}
             handleEdit={handleEdit}
             handleDelete={handleDelete}
+            clearExpenses={handleClear}
           />
         </section>
       </section>

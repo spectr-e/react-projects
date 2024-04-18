@@ -1,7 +1,12 @@
 import { Button } from '../../components'
 import ExpenseItem from './ExpenseItem'
 
-const ExpensesList = ({ clearItems, handleEdit, handleDelete, expenses }) => {
+const ExpensesList = ({
+  clearExpenses,
+  handleEdit,
+  handleDelete,
+  expenses,
+}) => {
   return (
     <>
       <ul className='list'>
@@ -20,7 +25,7 @@ const ExpensesList = ({ clearItems, handleEdit, handleDelete, expenses }) => {
         <Button
           text={`Clear all`}
           classes={'btn-danger'}
-          handleClick={clearItems}
+          handleClick={clearExpenses}
         />
       )}
     </>
