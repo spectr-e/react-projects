@@ -65,6 +65,12 @@ const ExpenseCalculatorApp = () => {
             : exp
         })
         setExpenses(tempExp)
+        // Clear the form
+        setFormData({
+          date: '',
+          amount: '',
+          item: '',
+        })
       } else {
         const singlExp = {
           id: uuidV4(),
@@ -73,14 +79,26 @@ const ExpenseCalculatorApp = () => {
           amount: formData.amount,
         }
         setExpenses([...expenses, singlExp])
+        // Clear the form
+        setFormData({
+          date: '',
+          amount: '',
+          item: '',
+        })
       }
     }
   }
   // On Edit
-  const handleEdit = (e) => {}
+  const handleEdit = (id) => {}
 
   // On Delete
-  const handleDelete = (e) => {}
+  const handleDelete = (id) => {
+    if (window.confirm('Are you sure you want to delete this expense?')) {
+      let filteredExpenses = expenses.filter((expense) => expense.id !== id)
+      setExpenses(filteredExpenses)
+      // TODO: Delete Alert
+    }
+  }
 
   // On Clear
   const handleClear = (e) => {
