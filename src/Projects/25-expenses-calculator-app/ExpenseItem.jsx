@@ -1,12 +1,13 @@
 import { MdDelete, MdEdit } from 'react-icons/md'
 import { Button } from '../../components'
+import { ExpenseItemStyle } from './styles/ExpenseItemStyle'
 
 const ExpenseItem = ({ expense, handleEdit, handleDelete }) => {
   // Destructure from expense object
   const { item, date, amount, id } = expense
 
   return (
-    <div className='expense-details'>
+    <ExpenseItemStyle className='expense-details'>
       <div className='d-flex flex-column' style={{ alignItems: 'flex-start' }}>
         <h4 className='text-primary'>{item}</h4>
         <small className='text-danger'>{date}</small>
@@ -24,7 +25,7 @@ const ExpenseItem = ({ expense, handleEdit, handleDelete }) => {
           text={<MdDelete />}
         />
       </div>
-    </div>
+    </ExpenseItemStyle>
   )
 }
 
