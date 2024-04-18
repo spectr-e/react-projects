@@ -12,7 +12,9 @@ const ExpenseItem = ({ expense, handleEdit, handleDelete }) => {
         <h4 className='text-primary'>{item}</h4>
         <small className='text-danger'>{date}</small>
       </div>
-      <div className='text-success'>${amount}</div>
+      <div className='text-success'>
+        <span style={{ fontSize: '12px' }}>KES</span> {amount}
+      </div>
       <div className='d-flex flex-column'>
         <Button
           classes={'btn-sm'}
