@@ -4,7 +4,7 @@ import ExpensesForm from './ExpensesForm'
 const ExpenseCalculatorApp = () => {
   return (
     <main className='container'>
-      <Title title={'Expense Calculator'} />
+      <Title title={'Expense Calculator'} classes={'text-center title'} />
       {/* TODO: Alert Component */}
       <section
         style={{
