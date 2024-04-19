@@ -6,7 +6,6 @@ const MortgageCalcApp = () => {
   useEffect(() => {
     homeInputRef.current.focus()
   }, [])
-  const alertType = 'alert-success'
 
   // Form controls
   const [formData, setFormData] = useState({
@@ -17,6 +16,7 @@ const MortgageCalcApp = () => {
   })
   const [monthlyPay, setMonthlyPay] = useState('')
   const [loanAmt, setLoanAmt] = useState('')
+  const alertType = monthlyPay ? 'alert-success' : 'alert-danger'
 
   // Event handlers
   // On Change
@@ -132,7 +132,7 @@ const MortgageCalcApp = () => {
         />
 
         {/* Calculate Alert  */}
-        {monthlyPay && (
+        {monthlyPay ? (
           <h4
             className={`${alertType}`}
             style={{
@@ -140,7 +140,17 @@ const MortgageCalcApp = () => {
               margin: '16px 0',
             }}
           >
-            KES {monthlyPay} per month
+            Pay KES {monthlyPay} per month
+          </h4>
+        ) : (
+          <h4
+            className={`${alertType}`}
+            style={{
+              width: 'auto',
+              margin: '16px 0',
+            }}
+          >
+            Complete all the fields
           </h4>
         )}
       </form>
