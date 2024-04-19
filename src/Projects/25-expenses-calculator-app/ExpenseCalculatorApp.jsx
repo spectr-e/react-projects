@@ -4,6 +4,7 @@ import ExpensesForm from './ExpensesForm'
 import ExpensesList from './ExpensesList'
 import { BudgetStyle } from './styles/BudgetStyle'
 import { v4 as uuidV4 } from 'uuid'
+import Alerts from './Alerts'
 
 // Local Storage
 const initalExpenses = localStorage.getItem('expenses')
@@ -30,6 +31,9 @@ const ExpenseCalculatorApp = () => {
   const [budget, setBudget] = useState('')
   const [id, setId] = useState(0)
   const [edit, setEdit] = useState(false)
+  const [alert, setAlert] = useState({
+    show: false,
+  })
 
   // App initialization
   const inputBudget = useRef(null)
@@ -87,6 +91,18 @@ const ExpenseCalculatorApp = () => {
     // TODO: Clear Alert
   }
 
+  // On Alert
+  const handleAlert = ({ type, text }) => {
+    setAlert({
+      show: true,
+      type,
+      text,
+    })
+    setTimeout(() => {
+      setAlert({ show: false })
+    }, 3000)
+  }
+
   // On submit
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -135,7 +151,7 @@ const ExpenseCalculatorApp = () => {
     <main className='container'>
       <Title title={'Expense Calculator'} classes={'text-center title'} />
       {/* TODO: Alert Component */}
-
+      {alert.show && <Alerts type={alert.type} text={alert.text} />}
       <section
         style={{
           display: 'grid',
