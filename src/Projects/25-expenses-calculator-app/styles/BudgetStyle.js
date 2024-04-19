@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const BudgetStyle = styled.div`
-  display: flex;
+  /* display: flex; */
   input {
     outline: none;
     border: none;

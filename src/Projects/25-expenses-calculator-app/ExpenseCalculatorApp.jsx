@@ -160,7 +160,7 @@ const ExpenseCalculatorApp = () => {
             <div className='card-body'>
               {/* Display Budget*/}
               <BudgetStyle>
-                <h3>Budget (KES) </h3>
+                <h3>Budget (KES)</h3>
                 <input
                   name='budget'
                   ref={inputBudget}
@@ -171,10 +171,16 @@ const ExpenseCalculatorApp = () => {
               </BudgetStyle>
 
               {/* Display Total Expenses */}
-              <h3 className='mb-1'>Total Expenses (KES): </h3>
+              <h3 className='mb-1'>
+                Total Expenses : <br />
+                KES {calcExpenses(expenses)}
+              </h3>
 
               {/* Display Total Savings */}
-              <h3>Savings (KES): {calcSavings(budget, expenses)}</h3>
+              <h3>
+                Savings : <br />
+                KES {calcSavings(budget, expenses)}
+              </h3>
             </div>
           </section>
         </aside>
