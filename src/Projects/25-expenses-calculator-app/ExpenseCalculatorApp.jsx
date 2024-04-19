@@ -81,14 +81,26 @@ const ExpenseCalculatorApp = () => {
     if (window.confirm('Are you sure you want to delete this expense?')) {
       let filteredExpenses = expenses.filter((expense) => expense.id !== id)
       setExpenses(filteredExpenses)
-      // TODO: Delete Alert
+
+      //  Delete Alert
+      handleAlert({
+        type: 'warning',
+        text: 'You have successfully deleted this expense',
+      })
     }
   }
 
   // On Clear
   const handleClear = () => {
-    setExpenses([])
-    // TODO: Clear Alert
+    if (window.confirm('Are you sure you want to delete all expenses?')) {
+      setExpenses([])
+    }
+
+    // Clear Alert
+    handleAlert({
+      type: 'success',
+      text: 'You have successfully deleted all expenses',
+    })
   }
 
   // On Alert
@@ -127,7 +139,11 @@ const ExpenseCalculatorApp = () => {
           amount: '',
           item: '',
         })
-        // TODO: Edit Alert
+        // Edit Alert
+        handleAlert({
+          type: 'success',
+          text: 'You have successfully edited the expense ',
+        })
       } else {
         const singlExp = {
           id: uuidV4(),
@@ -142,7 +158,11 @@ const ExpenseCalculatorApp = () => {
           amount: '',
           item: '',
         })
-        // TODO: Add Alert
+        // Add Alert
+        handleAlert({
+          type: 'success',
+          text: 'You have successfully added an expense ',
+        })
       }
     }
   }
@@ -150,7 +170,7 @@ const ExpenseCalculatorApp = () => {
   return (
     <main className='container'>
       <Title title={'Expense Calculator'} classes={'text-center title'} />
-      {/* TODO: Alert Component */}
+      {/* Alert Component */}
       {alert.show && <Alerts type={alert.type} text={alert.text} />}
       <section
         style={{
