@@ -12,11 +12,11 @@ const MortgageCalcApp = () => {
   const [formData, setFormData] = useState({
     homeVal: '',
     downPayment: '',
-    loanAmt: '',
     interestRate: '',
     loanDuration: '',
   })
   const [monthlyPay, setMonthlyPay] = useState('')
+  const [loanAmt, setLoanAmt] = useState('')
 
   // Event handlers
   // On Change
@@ -28,9 +28,6 @@ const MortgageCalcApp = () => {
       case 'downPayment':
         setFormData({ ...formData, downPayment: e.target.value })
         break
-      case 'loanAmount':
-        setFormData({ ...formData, loanAmount: e.target.value })
-        break
       case 'interestRate':
         setFormData({ ...formData, interestRate: e.target.value })
         break
@@ -41,6 +38,14 @@ const MortgageCalcApp = () => {
         break
     }
   }
+
+  // Calculations
+  // 1. Calc the loan amount
+  const calcLoanAmt = () => {
+    setLoanAmt(formData.homeVal - formData.downPayment)
+    return loanAmt
+  }
+
   return (
     <div className='container card mt-4' style={{ width: 500 }}>
       <Title title={'Mortgage Calculator'} classes={'title text-center'} />
@@ -61,6 +66,7 @@ const MortgageCalcApp = () => {
             refer={homeInputRef}
             values={formData.homeVal}
             onChange={handleChange}
+            onKeyUp={calcLoanAmt}
           />
           <Form
             inputName={'downPayment'}
@@ -69,6 +75,7 @@ const MortgageCalcApp = () => {
             placeholderText={'Enter your deposit amount'}
             values={formData.downPayment}
             onChange={handleChange}
+            onKeyUp={calcLoanAmt}
           />
           <Form
             inputName={'interestRate'}
@@ -87,11 +94,10 @@ const MortgageCalcApp = () => {
             onChange={handleChange}
           />
           <Form
-            inputName={'loanAmt'}
             inputType='number'
             labelText={'Loan Amount'}
             placeholderText={'The calculated loan amount'}
-            values={formData.loanAmt}
+            values={loanAmt}
             readOnly={true}
           />
         </div>
@@ -110,7 +116,7 @@ const MortgageCalcApp = () => {
               margin: '16px 0',
             }}
           >
-            KES {monthlyPay}
+            Your monthly mortgage will be KES {monthlyPay}
           </h4>
         )}
       </form>
