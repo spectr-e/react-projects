@@ -21,6 +21,7 @@ const Form = ({
     borderRadius: '4px',
     width: 200,
     marginRight: '8px',
+    background: readOnly && 'lightgray',
   }
   return (
     <div className='dsf flex-column mb-1'>

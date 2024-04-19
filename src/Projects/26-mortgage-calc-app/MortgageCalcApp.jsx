@@ -16,6 +16,7 @@ const MortgageCalcApp = () => {
     interestRate: '',
     loanDuration: '',
   })
+  const [monthlyPay, setMonthlyPay] = useState('')
 
   // Event handlers
   // On Change
@@ -70,14 +71,6 @@ const MortgageCalcApp = () => {
             onChange={handleChange}
           />
           <Form
-            inputName={'loanAmt'}
-            inputType='number'
-            labelText={'Loan Amount'}
-            placeholderText={'Enter the loan amount'}
-            values={formData.loanAmt}
-            onChange={handleChange}
-          />
-          <Form
             inputName={'interestRate'}
             inputType='number'
             labelText={'Interest Rate (%)'}
@@ -93,6 +86,14 @@ const MortgageCalcApp = () => {
             values={formData.loanDuration}
             onChange={handleChange}
           />
+          <Form
+            inputName={'loanAmt'}
+            inputType='number'
+            labelText={'Loan Amount'}
+            placeholderText={'The calculated loan amount'}
+            values={formData.loanAmt}
+            readOnly={true}
+          />
         </div>
         <Button
           btnType={'submit'}
@@ -100,14 +101,18 @@ const MortgageCalcApp = () => {
           classes={'btn-primary btn-block'}
         />
 
-        {/* TODO: Calculate Alert  */}
-        <h4
-          className={`${alertType}`}
-          style={{
-            width: 'auto',
-            margin: '16px 0',
-          }}
-        ></h4>
+        {/* Calculate Alert  */}
+        {monthlyPay && (
+          <h4
+            className={`${alertType}`}
+            style={{
+              width: 'auto',
+              margin: '16px 0',
+            }}
+          >
+            KES {monthlyPay}
+          </h4>
+        )}
       </form>
     </div>
   )
