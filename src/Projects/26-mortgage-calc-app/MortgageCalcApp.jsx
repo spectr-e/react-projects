@@ -6,7 +6,7 @@ const MortgageCalcApp = () => {
   useEffect(() => {
     homeInputRef.current.focus()
   }, [])
-  const alertType = 'alert-danger'
+  const alertType = 'alert-success'
 
   // Form controls
   const [formData, setFormData] = useState({
@@ -44,6 +44,29 @@ const MortgageCalcApp = () => {
   const calcLoanAmt = () => {
     setLoanAmt(formData.homeVal - formData.downPayment)
     return loanAmt
+  }
+
+  // 2. Calc the monthly payment
+  const calcMonthlyPay = () => {
+    // Interest Rate Converter
+    const percentToDec = (percent) => {
+      return percent / 12 / 100
+    }
+
+    // Year Converter
+    const yearToMonth = (year) => {
+      return year * 12
+    }
+
+    const interest = percentToDec(formData.interestRate)
+    const months = yearToMonth(formData.loanDuration)
+    const payment = (
+      (interest * loanAmt) /
+      (1 - Math.pow(1 + interest, -months))
+    ).toFixed(2)
+
+    setMonthlyPay(payment)
+    return monthlyPay
   }
 
   return (
@@ -105,6 +128,7 @@ const MortgageCalcApp = () => {
           btnType={'submit'}
           text='Calculate'
           classes={'btn-primary btn-block'}
+          handleClick={calcMonthlyPay}
         />
 
         {/* Calculate Alert  */}
@@ -116,7 +140,7 @@ const MortgageCalcApp = () => {
               margin: '16px 0',
             }}
           >
-            Your monthly mortgage will be KES {monthlyPay}
+            KES {monthlyPay} per month
           </h4>
         )}
       </form>
