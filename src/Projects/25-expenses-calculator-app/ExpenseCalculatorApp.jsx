@@ -18,6 +18,8 @@ const ExpenseCalculatorApp = () => {
     item: '',
   })
   const [budget, setBudget] = useState('')
+  const [id, setId] = useState(0)
+  const [edit, setEdit] = useState(false)
 
   // App initialization
   const inputBudget = useRef(null)
@@ -47,12 +49,39 @@ const ExpenseCalculatorApp = () => {
     }
   }
 
+  // On Edit
+  const handleEdit = (id) => {
+    setEdit(true)
+    let editedExpense = expenses.find((expense) => expense.id === id)
+    let { date, item, amount } = editedExpense
+    setFormData({
+      date: date,
+      item: item,
+      amount: amount,
+    })
+    setId(id)
+  }
+
+  // On Delete
+  const handleDelete = (id) => {
+    if (window.confirm('Are you sure you want to delete this expense?')) {
+      let filteredExpenses = expenses.filter((expense) => expense.id !== id)
+      setExpenses(filteredExpenses)
+      // TODO: Delete Alert
+    }
+  }
+
+  // On Clear
+  const handleClear = () => {
+    setExpenses([])
+    // TODO: Clear Alert
+  }
+
   // On submit
-  const [id, setId] = useState(0)
-  let edit
   const handleSubmit = (e) => {
     e.preventDefault()
     if (formData.date && formData.item && formData.amount > 0) {
+      // Edit Existing Expense
       if (edit) {
         let tempExp = expenses.map((exp) => {
           return exp.id === id
@@ -65,12 +94,14 @@ const ExpenseCalculatorApp = () => {
             : exp
         })
         setExpenses(tempExp)
+        setEdit(false)
         // Clear the form
         setFormData({
           date: '',
           amount: '',
           item: '',
         })
+        // TODO: Edit Alert
       } else {
         const singlExp = {
           id: uuidV4(),
@@ -85,25 +116,9 @@ const ExpenseCalculatorApp = () => {
           amount: '',
           item: '',
         })
+        // TODO: Add Alert
       }
     }
-  }
-  // On Edit
-  const handleEdit = (id) => {}
-
-  // On Delete
-  const handleDelete = (id) => {
-    if (window.confirm('Are you sure you want to delete this expense?')) {
-      let filteredExpenses = expenses.filter((expense) => expense.id !== id)
-      setExpenses(filteredExpenses)
-      // TODO: Delete Alert
-    }
-  }
-
-  // On Clear
-  const handleClear = (e) => {
-    setExpenses([])
-    // TODO: Clear Alert
   }
 
   return (
@@ -122,6 +137,7 @@ const ExpenseCalculatorApp = () => {
         <aside>
           {/* ExpensesForm Component */}
           <ExpensesForm
+            edit={edit}
             date={formData.date}
             item={formData.item}
             amount={formData.amount}
