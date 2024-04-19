@@ -164,6 +164,12 @@ const ExpenseCalculatorApp = () => {
           text: 'You have successfully added an expense ',
         })
       }
+    } else {
+      // Validation Alert
+      handleAlert({
+        type: 'danger',
+        text: 'Please enter the missing form values',
+      })
     }
   }
 
