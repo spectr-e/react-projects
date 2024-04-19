@@ -10,6 +10,15 @@ const initalExpenses = localStorage.getItem('expenses')
   ? JSON.parse(localStorage.getItem('expenses'))
   : []
 
+const calcSavings = (budget, expenses) => {
+  return (
+    budget -
+    expenses.reducer((total, expense) => {
+      return (total += parseInt(expense.amount, 10))
+    }, 0)
+  )
+}
+
 const ExpenseCalculatorApp = () => {
   const [expenses, setExpenses] = useState(initalExpenses)
   const [formData, setFormData] = useState({
@@ -160,9 +169,11 @@ const ExpenseCalculatorApp = () => {
                 />
               </BudgetStyle>
 
-              {/* Display Totals */}
+              {/* Display Total Expenses */}
               <h3 className='mb-1'>Total Expenses (KES): </h3>
-              <h3>Savings (KES): </h3>
+
+              {/* Display Total Savings */}
+              <h3>Savings (KES): {calcSavings(budget, expenses)}</h3>
             </div>
           </section>
         </aside>
