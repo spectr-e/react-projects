@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Button, Form, Title } from '../../components'
 
 const MortgageCalcApp = () => {
+  const homeInputRef = useRef(null)
+  useEffect(() => {
+    homeInputRef.current.focus()
+  }, [])
+
   return (
     <div className='container card mt-4' style={{ width: 500 }}>
       <Title title={'Mortgage Calculator'} classes={'title text-center'} />
@@ -18,6 +23,7 @@ const MortgageCalcApp = () => {
             inputType='number'
             labelText={'Home Value'}
             placeholderText={'Enter the value of the home'}
+            refer={homeInputRef}
           />
           <Form
             inputType='number'
