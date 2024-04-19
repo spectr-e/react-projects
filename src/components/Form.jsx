@@ -19,7 +19,8 @@ const Form = ({
     padding: '8px 12px',
     fontSize: '12px',
     borderRadius: '4px',
-    width: 300,
+    width: 200,
+    marginRight: '8px',
   }
   return (
     <div className='dsf flex-column mb-1'>
