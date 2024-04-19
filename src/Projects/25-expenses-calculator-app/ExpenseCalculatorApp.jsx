@@ -10,13 +10,14 @@ const initalExpenses = localStorage.getItem('expenses')
   ? JSON.parse(localStorage.getItem('expenses'))
   : []
 
+const calcExpenses = (expenses) => {
+  return expenses.reduce((total, expense) => {
+    return (total += parseInt(expense.amount, 10))
+  }, 0)
+}
+
 const calcSavings = (budget, expenses) => {
-  return (
-    budget -
-    expenses.reducer((total, expense) => {
-      return (total += parseInt(expense.amount, 10))
-    }, 0)
-  )
+  return budget - calcExpenses(expenses)
 }
 
 const ExpenseCalculatorApp = () => {
