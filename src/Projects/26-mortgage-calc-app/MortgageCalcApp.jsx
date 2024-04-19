@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Button, Form, Title } from '../../components'
 
 const MortgageCalcApp = () => {
@@ -6,6 +6,15 @@ const MortgageCalcApp = () => {
   useEffect(() => {
     homeInputRef.current.focus()
   }, [])
+
+  // Form controls
+  const [formData, setFormData] = useState({
+    homeVal: '',
+    downPayment: '',
+    loanAmt: '',
+    interestRate: '',
+    loanDuration: '',
+  })
 
   return (
     <div className='container card mt-4' style={{ width: 500 }}>
@@ -24,26 +33,31 @@ const MortgageCalcApp = () => {
             labelText={'Home Value'}
             placeholderText={'Enter the value of the home'}
             refer={homeInputRef}
+            values={formData.homeVal}
           />
           <Form
             inputType='number'
             labelText={'Down Payment'}
             placeholderText={'Enter your deposit amount'}
+            values={formData.downPayment}
           />
           <Form
             inputType='number'
             labelText={'Loan Amount'}
             placeholderText={'Enter the loan amount'}
+            values={formData.loanAmt}
           />
           <Form
             inputType='number'
             labelText={'Interest Rate (%)'}
             placeholderText={'Enter the interest rate'}
+            values={formData.interestRate}
           />
           <Form
             inputType='number'
             labelText={'Loan Duration (Yrs)'}
             placeholderText={'Enter the loan duration'}
+            values={formData.loanDuration}
           />
         </div>
         <Button
