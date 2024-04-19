@@ -6,6 +6,7 @@ const MortgageCalcApp = () => {
   useEffect(() => {
     homeInputRef.current.focus()
   }, [])
+  const alertType = 'alert-danger'
 
   // Form controls
   const [formData, setFormData] = useState({
@@ -100,6 +101,13 @@ const MortgageCalcApp = () => {
         />
 
         {/* TODO: Calculate Alert  */}
+        <h4
+          className={`${alertType}`}
+          style={{
+            width: 'auto',
+            margin: '16px 0',
+          }}
+        ></h4>
       </form>
     </div>
   )
