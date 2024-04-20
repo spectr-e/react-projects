@@ -26,7 +26,10 @@ import AnimatedLoginForm from './23-animated-login-form-app/AnimatedLoginForm'
 import PhoneBookApp from './24-phone-book-app/PhoneBookApp'
 import ExpenseCalculatorApp from './25-expenses-calculator-app/ExpenseCalculatorApp'
 import MortgageCalcApp from './26-mortgage-calc-app/MortgageCalcApp'
+import CourseStoreApp from './27-course-store-app/CourseStoreApp'
+
 export {
+  CourseStoreApp,
   MortgageCalcApp,
   ExpenseCalculatorApp,
   PhoneBookApp,
