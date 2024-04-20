@@ -1,13 +1,16 @@
+import { useState } from 'react'
 import { Button, Title } from '../../components'
 import Courses from './components/Courses'
 
 // Importing the Database
-import { CourseDB } from './db'
+import { CourseDB, CurrenciesDB } from './db'
 
 document.body.style.backgroundColor = '#282c34'
 document.body.style.color = '#fff'
 
 const CourseStoreApp = () => {
+  const [currency, setCurrency] = useState(CurrenciesDB.KES)
+
   return (
     <div className='container p-1'>
       {/* TODO: Add a Change Currency component here */}
