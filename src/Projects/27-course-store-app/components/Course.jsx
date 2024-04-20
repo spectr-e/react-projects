@@ -1,7 +1,7 @@
 import { Button } from '../../../components'
 
 const Course = ({ course }) => {
-  const { title, img } = course
+  const { title, img, price } = course
 
   return (
     <li className={`card mb-2`} style={{ width: 240 }}>
@@ -16,7 +16,11 @@ const Course = ({ course }) => {
         className='card-footer'
         style={{ display: 'flex', justifyContent: 'space-between' }}
       >
-        <h4>Price</h4>
+        <h4>
+          {' '}
+          <span className='font-medium font-sm'>KES </span>
+          {price}
+        </h4>
         <Button classes={'btn-success'} text='Buy' />
       </div>
     </li>
