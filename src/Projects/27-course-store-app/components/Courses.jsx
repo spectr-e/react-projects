@@ -1,9 +1,11 @@
 import Course from './Course'
 
-const Courses = () => {
+const Courses = ({ courses = [] }) => {
   return (
     <ul className='d-flex mt-2' style={{ flexWrap: 'wrap', gap: 28 }}>
-      <Course />
+      {courses.map((course, index) => (
+        <Course key={index} course={course} />
+      ))}
     </ul>
   )
 }
