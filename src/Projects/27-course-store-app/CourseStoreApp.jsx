@@ -1,6 +1,9 @@
 import { Button, Title } from '../../components'
 import Courses from './components/Courses'
 
+// Importing the Database
+import { CourseDB } from './db'
+
 document.body.style.backgroundColor = '#282c34'
 document.body.style.color = '#fff'
 
