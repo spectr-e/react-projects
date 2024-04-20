@@ -31,7 +31,7 @@ const CourseStoreApp = () => {
       </p>
 
       {/* TODO: Add course cards here */}
-      <Courses />
+      <Courses courses={CourseDB} />
     </div>
   )
 }
