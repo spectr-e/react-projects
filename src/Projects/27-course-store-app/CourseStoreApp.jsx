@@ -5,6 +5,9 @@ import Courses from './components/Courses'
 // Importing the Database
 import { CourseDB, CurrenciesDB } from './db'
 
+// Importing currency context
+import { CurrencyContext } from './context'
+
 document.body.style.backgroundColor = '#282c34'
 document.body.style.color = '#fff'
 
