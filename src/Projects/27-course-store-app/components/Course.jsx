@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../../../components'
 
 // import currency context
@@ -6,14 +6,32 @@ import { CurrencyContext } from '../context'
 
 const Course = ({ course }) => {
   const { title, img, price } = course
+
   const currency = React.useContext(CurrencyContext)
   const contextPrice = new Intl.NumberFormat('en-us', {
     style: 'currency',
     currency: currency.code,
   }).format(price * currency.conversionRate)
 
+  const [courseBG, setCourseBG] = useState()
+  useEffect(() => {
+    switch (currency.code) {
+      case 'USD':
+        setCourseBG('card-light')
+        break
+      case 'EUR':
+        setCourseBG('card-primary')
+        break
+      case 'KES':
+        setCourseBG('card-success')
+        break
+      default:
+        break
+    }
+  }, [currency.code])
+
   return (
-    <li className={`card mb-2`} style={{ width: 240 }}>
+    <li className={`card mb-2 ${courseBG}`} style={{ width: 240 }}>
       <div className='card-header'>{title}</div>
       <img src={img} alt='course' style={{ height: '100%' }} />
       <p className='card-body'>
