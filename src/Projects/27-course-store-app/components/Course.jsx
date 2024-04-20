@@ -1,10 +1,12 @@
 import { Button } from '../../../components'
 
-const Course = ({ title = 'Title' }) => {
+const Course = ({ course }) => {
+  const { title, img } = course
+
   return (
     <li className={`card mb-2`} style={{ width: 240 }}>
       <div className='card-header'>{title}</div>
-      <img src='' alt='course' style={{ height: '100%' }} />
+      <img src={img} alt='course' style={{ height: '100%' }} />
       <p className='card-body'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero
         voluptas non ad magnam, atque, a maiores esse sit repellat hic quisquam
