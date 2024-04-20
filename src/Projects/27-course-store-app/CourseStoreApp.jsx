@@ -11,14 +11,25 @@ document.body.style.color = '#fff'
 const CourseStoreApp = () => {
   const [currency, setCurrency] = useState(CurrenciesDB.KES)
 
+  // Event handlers
+  // Change Currency
+  const changeCurrency = (cur) => {
+    setCurrency(cur)
+  }
+
   return (
     <div className='container p-1'>
       {/* TODO: Add a Change Currency component here */}
       <h4 className='font-medium mb-1'>Change Currency : </h4>
       <div className='dsf'>
-        <Button classes={'btn-light btn-sm'} />
-        <Button classes={'btn-light btn-sm'} />
-        <Button classes={'btn-light btn-sm'} />
+        {Object.values(CurrenciesDB).map((cur, index) => (
+          <Button
+            key={index}
+            classes={'btn-light btn-sm'}
+            text={cur.code}
+            handleClick={() => changeCurrency(cur)}
+          />
+        ))}
       </div>
 
       <Title title={'Course Store'} classes={'title text-center'} />
