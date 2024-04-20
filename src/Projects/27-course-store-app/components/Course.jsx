@@ -35,9 +35,8 @@ const Course = ({ course }) => {
       <div className='card-header'>{title}</div>
       <img src={img} alt='course' style={{ height: '100%' }} />
       <p className='card-body'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero
-        voluptas non ad magnam, atque, a maiores esse sit repellat hic quisquam
-        officia excepturi maxime dolor illum? Maiores, reprehenderit pariatur!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, soluta.
+        Lorem ipsum dolor sit amet.
       </p>
       <div
         className='card-footer'
