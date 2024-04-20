@@ -1,7 +1,16 @@
+import React from 'react'
 import { Button } from '../../../components'
+
+// import currency context
+import { CurrencyContext } from '../context'
 
 const Course = ({ course }) => {
   const { title, img, price } = course
+  const currency = React.useContext(CurrencyContext)
+  const contextPrice = new Intl.NumberFormat('en-us', {
+    style: 'currency',
+    currency: currency.code,
+  }).format(price * currency.conversionRate)
 
   return (
     <li className={`card mb-2`} style={{ width: 240 }}>
@@ -16,11 +25,7 @@ const Course = ({ course }) => {
         className='card-footer'
         style={{ display: 'flex', justifyContent: 'space-between' }}
       >
-        <h4>
-          {' '}
-          <span className='font-medium font-sm'>KES </span>
-          {price}
-        </h4>
+        <h4>{contextPrice}</h4>
         <Button classes={'btn-success'} text='Buy' />
       </div>
     </li>
