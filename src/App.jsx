@@ -26,6 +26,7 @@ import {
   PhoneBookApp,
   ExpenseCalculatorApp,
   MortgageCalcApp,
+  CourseStoreApp,
 } from './Projects'
 
 function App() {
@@ -57,7 +58,8 @@ function App() {
         {/* <AnimatedLoginForm /> */}
         {/* <PhoneBookApp /> */}
         {/* <ExpenseCalculatorApp /> */}
-        <MortgageCalcApp />
+        {/* <MortgageCalcApp /> */}
+        <CourseStoreApp />
       </div>
     </div>
   )
