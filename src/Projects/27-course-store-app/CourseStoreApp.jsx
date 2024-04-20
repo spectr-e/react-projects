@@ -1,4 +1,5 @@
 import { Button, Title } from '../../components'
+import Courses from './components/Courses'
 
 document.body.style.backgroundColor = '#282c34'
 document.body.style.color = '#fff'
@@ -25,7 +26,9 @@ const CourseStoreApp = () => {
         beatae mollitia voluptatum quibusdam non nemo inventore voluptas odit
         quia.
       </p>
+
       {/* TODO: Add course cards here */}
+      <Courses />
     </div>
   )
 }
