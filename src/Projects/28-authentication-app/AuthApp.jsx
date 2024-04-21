@@ -7,9 +7,28 @@ const AuthApp = () => {
     title: 'Authenticate',
   })
 
+  // form controls
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  })
+
   // event handlers
   const handleSubmit = (e) => {
     e.preventDefault()
+  }
+
+  const handleChange = (e) => {
+    switch (e.target.name) {
+      case 'username':
+        setFormData({ ...formData, username: e.target.value })
+        break
+      case 'password':
+        setFormData({ ...formData, password: e.target.value })
+        break
+      default:
+        break
+    }
   }
 
   return (
@@ -27,11 +46,16 @@ const AuthApp = () => {
             labelText={'Username'}
             inputName={'username'}
             placeholderText={'Enter your username'}
+            values={formData.username}
+            onChange={handleChange}
           />
           <Form
             labelText={'Password'}
             inputName={'password'}
+            inputType='password'
             placeholderText={'Enter your password'}
+            values={formData.password}
+            onChange={handleChange}
           />
           <Button
             classes={'btn-block btn-primary'}
