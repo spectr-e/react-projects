@@ -5,7 +5,7 @@ import Auth from './components/Auth'
 import { AuthContext } from './context/AuthContext'
 
 const AuthApp = () => {
-  // authentication (context provider)
+  // login (context provider)
   const [authStatus, setAuthStatus] = useState(null)
   const login = () => {
     if (formData.username === 'josiah' && formData.password === '1234') {
@@ -13,6 +13,22 @@ const AuthApp = () => {
       clearInputs()
       authenticate()
     }
+  }
+
+  // authenticate - login component
+  const authenticate = () => {
+    setUi({
+      wrapper: false,
+      title: `Welcome ${(formData.username)}`,
+    })
+  }
+
+  // clear form input fields
+  const clearInputs = () => {
+    setFormData({
+      username: '',
+      password: '',
+    })
   }
 
   // ui controls
