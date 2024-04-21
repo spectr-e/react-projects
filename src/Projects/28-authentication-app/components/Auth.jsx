@@ -15,18 +15,21 @@ const Auth = () => {
           classes={'btn-block btn-danger'}
           text='Logout'
           btnType={'submit'}
+          handleClick={auth.logout}
         />
       ) : auth.status === false ? (
         <Button
           classes={'btn-block btn-primary'}
           text='Try Again'
           btnType={'submit'}
+          handleClick={auth.login}
         />
       ) : (
         <Button
           classes={'btn-block btn-success'}
           text='Login'
           btnType={'submit'}
+          handleClick={auth.login}
         />
       )}
     </div>
