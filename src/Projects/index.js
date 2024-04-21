@@ -27,8 +27,10 @@ import PhoneBookApp from './24-phone-book-app/PhoneBookApp'
 import ExpenseCalculatorApp from './25-expenses-calculator-app/ExpenseCalculatorApp'
 import MortgageCalcApp from './26-mortgage-calc-app/MortgageCalcApp'
 import CourseStoreApp from './27-course-store-app/CourseStoreApp'
+import AuthApp from './28-authentication-app/AuthApp'
 
 export {
+  AuthApp,
   CourseStoreApp,
   MortgageCalcApp,
   ExpenseCalculatorApp,
