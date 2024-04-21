@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button, Form, Title } from '../../components'
 import { Wrapper } from './styles/Wrapper'
+import Auth from './components/Auth'
 
 const AuthApp = () => {
   const [ui, setUi] = useState({
@@ -41,34 +42,24 @@ const AuthApp = () => {
       {/* Form */}
       {ui.wrapper && (
         <Wrapper className={animateDeny && 'active'}>
-          <form
-            onSubmit={handleSubmit}
-            className='d-flex flex-column'
-            style={{ width: '100%' }}
-          >
-            <Form
-              labelText={'Username'}
-              inputName={'username'}
-              placeholderText={'Enter your username'}
-              values={formData.username}
-              onChange={handleChange}
-            />
-            <Form
-              labelText={'Password'}
-              inputName={'password'}
-              inputType='password'
-              placeholderText={'Enter your password'}
-              values={formData.password}
-              onChange={handleChange}
-            />
-            <Button
-              classes={'btn-block btn-primary'}
-              text='Login'
-              btnType={'submit'}
-            />
-          </form>
+          <Form
+            labelText={'Username'}
+            inputName={'username'}
+            placeholderText={'Enter your username'}
+            values={formData.username}
+            onChange={handleChange}
+          />
+          <Form
+            labelText={'Password'}
+            inputName={'password'}
+            inputType='password'
+            placeholderText={'Enter your password'}
+            values={formData.password}
+            onChange={handleChange}
+          />
         </Wrapper>
       )}
+      <Auth />
     </div>
   )
 }
