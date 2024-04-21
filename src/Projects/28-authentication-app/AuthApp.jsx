@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Button, Form, Title } from '../../components'
 import { Wrapper } from './styles/Wrapper'
 import Auth from './components/Auth'
+import { AuthContext } from './context/AuthContext'
 
 const AuthApp = () => {
   const [ui, setUi] = useState({
@@ -10,6 +11,10 @@ const AuthApp = () => {
   })
 
   const [animateDeny, setAnimateDeny] = useState(false)
+  const inputUser = useRef(null)
+  useEffect(() => {
+    inputUser.current.focus()
+  }, [])
 
   // form controls
   const [formData, setFormData] = useState({
@@ -48,6 +53,7 @@ const AuthApp = () => {
             placeholderText={'Enter your username'}
             values={formData.username}
             onChange={handleChange}
+            refer={inputUser}
           />
           <Form
             labelText={'Password'}
