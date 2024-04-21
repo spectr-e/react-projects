@@ -12,6 +12,12 @@ const AuthApp = () => {
       setAuthStatus(true)
       clearInputs()
       authenticate()
+    } else {
+      setAuthStatus(false)
+      setAnimateDeny(true)
+      setTimeout(() => {
+        setAnimateDeny(false)
+      }, 300)
     }
   }
 
