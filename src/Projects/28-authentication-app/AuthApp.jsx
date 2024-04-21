@@ -19,8 +19,13 @@ const AuthApp = () => {
   const authenticate = () => {
     setUi({
       wrapper: false,
-      title: `Welcome ${(formData.username)}`,
+      title: `Welcome ${formData.username}`,
     })
+  }
+
+  // login (context provider)
+  const logout = () => {
+    window.location.reload(true)
   }
 
   // clear form input fields
