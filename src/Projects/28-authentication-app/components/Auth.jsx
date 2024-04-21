@@ -1,9 +1,15 @@
+import { useContext } from 'react'
 import { Alert, Button } from '../../../components'
+import { AuthContext } from '../context/AuthContext'
 
 const Auth = () => {
+  const auth = useContext(AuthContext)
+
   return (
     <div>
-      <Alert type={'success'} message={'Success'} />
+      {auth.status === true ? (
+        <Alert type={'success'} message={'Success'} />
+      ) : null}
       <Button
         classes={'btn-block btn-success'}
         text='Login'

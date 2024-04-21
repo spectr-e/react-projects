@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-export const AuthContext = useContext({
+export const AuthContext = React.useContext({
   status: null,
   login: () => {},
   logout: () => {},
