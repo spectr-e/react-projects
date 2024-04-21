@@ -19,7 +19,7 @@ const Form = ({
     padding: '8px 12px',
     fontSize: '12px',
     borderRadius: '4px',
-    width: 200,
+    width: 236,
     marginRight: '8px',
     background: readOnly && 'lightgray',
   }
