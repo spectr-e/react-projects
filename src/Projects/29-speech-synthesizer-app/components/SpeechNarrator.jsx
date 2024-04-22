@@ -3,11 +3,11 @@ import { Form } from '../../../components'
 import { useState } from 'react'
 
 const SpeechNarrator = ({ text }) => {
-  const splitText = (text, from, to) => {
-    text.slice(0, from)
-    text.slice(from, to)
-    text.slice(to)
-  }
+  const splitText = (text, from, to) => [
+    text.slice(0, from),
+    text.slice(from, to),
+    text.slice(to),
+  ]
 
   const [highlightSection, setHighlightSection] = useState({
     from: 0,
@@ -49,6 +49,7 @@ const SpeechNarrator = ({ text }) => {
       <AiOutlineRobot style={robotStyle} />
 
       {/* TODO: Highlighted Text Component Here */}
+      <HighlightedText text={text} {...highlightSection} />
 
       {/* rate */}
       <Form
