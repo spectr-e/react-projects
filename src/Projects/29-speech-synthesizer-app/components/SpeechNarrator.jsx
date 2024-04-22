@@ -3,10 +3,17 @@ import { Form } from '../../../components'
 import { useState } from 'react'
 
 const SpeechNarrator = ({ text }) => {
+  const splitText = (text, from, to) => {
+    text.slice(0, from)
+    text.slice(from, to)
+    text.slice(to)
+  }
+
   const [highlightSection, setHighlightSection] = useState({
-    from: '',
-    to: '',
+    from: 0,
+    to: 0,
   })
+
   const [rateValue, setRateValue] = useState('')
   const handleChange = (e) => {
     setRateValue(e.target.value)
@@ -25,12 +32,24 @@ const SpeechNarrator = ({ text }) => {
     setHighlightSection({ from: charIndex, to: charIndex + charLength })
   )
 
+  const HighlightedText = ({ text, from, to }) => {
+    const [start, highlight, finish] = splitText(text, from, to)
+    return (
+      <div className='card' style={{ maxWidth: 480 }}>
+        {start} <span className='bg-warning'>{highlight}</span>
+        {finish}
+      </div>
+    )
+  }
+
   return (
     <div className='d-flex flex-column my-3 container' style={{ gap: 30 }}>
       {/* robots */}
       <AiFillRobot style={robotStyle} className='text-primary' />
       <AiOutlineRobot style={robotStyle} />
+
       {/* TODO: Highlighted Text Component Here */}
+
       {/* rate */}
       <Form
         labelText={`Rate: ${rateValue}`}
