@@ -1,4 +1,4 @@
-const SpeechNarrator = () => {
+const SpeechNarrator = ({ text }) => {
   return <div>SpeechNarrator</div>
 }
 

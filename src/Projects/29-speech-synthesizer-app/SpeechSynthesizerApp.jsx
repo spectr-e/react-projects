@@ -11,9 +11,9 @@ const SpeechSynthesizerApp = () => {
   }
 
   return (
-    <div className='container'>
+    <div className='container d-flex flex-column'>
       <Title title={'Speech Synthesizer'} classes={'title text-center'} />
-      <SpeechNarrator />
+      <SpeechNarrator text={text} />
       <textarea
         value={text}
         onChange={handleChange}
