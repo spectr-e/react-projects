@@ -8,9 +8,6 @@ import { CourseDB, CurrenciesDB } from './db'
 // Importing currency context
 import { CurrencyContext } from './context'
 
-document.body.style.backgroundColor = '#282c34'
-document.body.style.color = '#fff'
-
 const CourseStoreApp = () => {
   const [currency, setCurrency] = useState(CurrenciesDB.KES)
 
@@ -22,7 +19,14 @@ const CourseStoreApp = () => {
 
   return (
     <CurrencyContext.Provider value={currency}>
-      <div className='container p-1'>
+      <div
+        className='container p-1'
+        style={{
+          background: '#282c34',
+          color: '#fff',
+          width: '100%',
+        }}
+      >
         {/* TODO: Add a Change Currency component here */}
         <h4 className='font-medium mb-1'>Change Currency : </h4>
         <div className='dsf'>

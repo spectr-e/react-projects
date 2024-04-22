@@ -28,6 +28,7 @@ import {
   MortgageCalcApp,
   CourseStoreApp,
   AuthApp,
+  SpeechSynthesizerApp,
 } from './Projects'
 
 function App() {
@@ -61,7 +62,8 @@ function App() {
         {/* <ExpenseCalculatorApp /> */}
         {/* <MortgageCalcApp /> */}
         {/* <CourseStoreApp /> */}
-        <AuthApp />
+        {/* <AuthApp /> */}
+        <SpeechSynthesizerApp />
       </div>
     </div>
   )
