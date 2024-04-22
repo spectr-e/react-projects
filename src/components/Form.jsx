@@ -13,6 +13,9 @@ const Form = ({
   classes,
   readOnly = false,
   refer,
+  step,
+  min,
+  max,
 }) => {
   const inputStyle = {
     border: '1px solid rgba(0,0,0,0.1)',
@@ -29,6 +32,9 @@ const Form = ({
         {labelText}
       </label>
       <input
+        step={step}
+        max={max}
+        min={min}
         type={inputType}
         placeholder={placeholderText}
         name={inputName}
