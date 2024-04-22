@@ -3,6 +3,10 @@ import { Form } from '../../../components'
 import { useState } from 'react'
 
 const SpeechNarrator = ({ text }) => {
+  const [highlightSection, setHighlightSection] = useState({
+    from: '',
+    to: '',
+  })
   const [rateValue, setRateValue] = useState('')
   const handleChange = (e) => {
     setRateValue(e.target.value)
@@ -13,6 +17,13 @@ const SpeechNarrator = ({ text }) => {
     padding: 0,
     cursor: 'pointer',
   }
+
+  // speech synthesizer browser API - represents a speech request containing content to be read and how it should be read
+  const synth = window.speechSynthesis
+  let utterance = new SpeechSynthesisUtterance(text)
+  utterance.addEventListener('boundary', ({ charIndex, charLength }) =>
+    setHighlightSection({ from: charIndex, to: charIndex + charLength })
+  )
 
   return (
     <div className='d-flex flex-column my-3 container' style={{ gap: 30 }}>
