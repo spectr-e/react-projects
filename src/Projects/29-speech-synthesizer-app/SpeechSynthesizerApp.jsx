@@ -4,7 +4,7 @@ import SpeechNarrator from './components/SpeechNarrator'
 
 const SpeechSynthesizerApp = () => {
   // textarea controls
-  const [text, setText] = useState('')
+  const [text, setText] = useState('sample text')
   // textarea handlers
   const handleChange = (e) => {
     setText(e.target.value)
