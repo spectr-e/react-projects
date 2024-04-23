@@ -29,6 +29,7 @@ import {
   CourseStoreApp,
   AuthApp,
   SpeechSynthesizerApp,
+  LazyLoadApp,
 } from './Projects'
 
 function App() {
@@ -63,7 +64,8 @@ function App() {
         {/* <MortgageCalcApp /> */}
         {/* <CourseStoreApp /> */}
         {/* <AuthApp /> */}
-        <SpeechSynthesizerApp />
+        {/* <SpeechSynthesizerApp /> */}
+        <LazyLoadApp />
       </div>
     </div>
   )
