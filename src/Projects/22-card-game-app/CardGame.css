@@ -2,7 +2,7 @@
   cursor: pointer;
   transform: scale(1.01);
 }
-.card {
+.card.card-game {
   transition: all 0.2s linear;
   animation: anime 3s ease;
 }

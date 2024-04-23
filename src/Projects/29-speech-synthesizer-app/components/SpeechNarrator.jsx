@@ -14,11 +14,6 @@ const SpeechNarrator = ({ text }) => {
     to: 0,
   })
 
-  const [rateValue, setRateValue] = useState('')
-  const handleChange = (e) => {
-    setRateValue(e.target.value)
-  }
-
   const robotStyle = {
     fontSize: 100,
     padding: 0,
@@ -42,7 +37,13 @@ const SpeechNarrator = ({ text }) => {
     )
   }
 
+  // synth controls
   const [showPlay, setShowPlay] = useState(false)
+  const [rateValue, setRateValue] = useState('')
+  const handleChange = (e) => {
+    setRateValue(e.target.value)
+  }
+  utterance.rate = rateValue
 
   // start narration
   const handlePlay = () => {

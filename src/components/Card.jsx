@@ -23,7 +23,7 @@ const Card = ({
   mirrorImg(player)
   return (
     <div
-      className={`card text-center m-1 shadow-md ${
+      className={`card card-game text-center m-1 shadow-md ${
         player === 'player_1' ? 'card-info' : 'card-danger'
       }`}
       style={{ maxWidth: 180 }}
