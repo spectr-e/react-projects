@@ -9,11 +9,17 @@ const ImagePost = ({ title, img }) => {
         {!title ? (
           <Title title={'Image Title'} classes={'subtitle'} />
         ) : (
-          <h2 className='font-semibold'>{title}</h2>
+          <h2 className='font-semibold'>{title.slice(0, 10)}</h2>
         )}
       </div>
       <div className='card-body d-flex' style={{ gap: 30 }}>
-        <img src={img} alt='jsonplaceholder.typicode.com' />
+        <LazyLoadImage
+          src={img}
+          alt='jsonplaceholder.typicode.com'
+          height={'fit-content'}
+          width={480}
+          effect='blur'
+        />
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
         facere. Et perspiciatis veritatis labore facere, ut, doloremque ducimus
         optio velit obcaecati quam tempore a nobis voluptatem voluptas enim
