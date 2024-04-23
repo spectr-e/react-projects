@@ -13,15 +13,12 @@ const LazyLoadApp = () => {
 
   return (
     <div className='container'>
-      <Title
-        title={'Image Grid Scroll with Lazy Load'}
-        classes={'text-center subtitle'}
-      />
-      <h1 className='text-center'>Post Images</h1>
+      <Title title={'Lazy Load App'} classes={'text-center title'} />
+      <Title title={'Post Images'} classes={'text-center'} />
       <div className='container d-flex flex-column' style={{ gap: 30 }}>
-        {posts.map((post, index) => {
-          ;<ImagePost key={index} title={post.title} img={post.url} />
-        })}
+        {posts.map((post, index) => (
+          <ImagePost key={index} title={post.title} img={post.url} />
+        ))}
       </div>
     </div>
   )
