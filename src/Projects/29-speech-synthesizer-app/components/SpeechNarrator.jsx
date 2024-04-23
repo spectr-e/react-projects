@@ -42,16 +42,32 @@ const SpeechNarrator = ({ text }) => {
     )
   }
 
+  const [showPlay, setShowPlay] = useState(false)
+
   // start narration
   const handlePlay = () => {
     synth.speak(utterance)
+    synth.resume()
+    setShowPlay(true)
+  }
+  // pause narration
+  const handlePause = () => {
+    synth.pause()
+    setShowPlay(false)
   }
 
   return (
     <div className='d-flex flex-column my-3 container' style={{ gap: 30 }}>
       {/* robots */}
-      <AiFillRobot style={robotStyle} className='text-primary' />
-      <AiOutlineRobot style={robotStyle} onClick={handlePlay} />
+      {showPlay ? (
+        <AiFillRobot
+          style={robotStyle}
+          className='text-primary'
+          onClick={handlePause}
+        />
+      ) : (
+        <AiOutlineRobot style={robotStyle} onClick={handlePlay} />
+      )}
 
       {/* TODO: Highlighted Text Component Here */}
       <HighlightedText text={text} {...highlightSection} />
